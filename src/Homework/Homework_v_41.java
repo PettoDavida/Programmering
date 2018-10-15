@@ -1,6 +1,6 @@
-package Metoder;
+package Homework;
 
-public class Homework {
+public class Homework_v_41 {
 
     public static void main(String args[]){
 
