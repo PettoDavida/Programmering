@@ -3,7 +3,6 @@ package Homework;
 public enum Homework_Gastable {
 
     AIR(1.29, 1.01),
-    O2(1.43, 0.92),
     OXYGEN(1.43, 0.92),
     HELIUM(0.18,5.1),
     XENON(5.89,0.16),
