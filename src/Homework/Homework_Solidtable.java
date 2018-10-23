@@ -6,7 +6,7 @@ public enum Homework_Solidtable {
     IRON(7.87, 0.45, 1538, 276),
     TUNGSTEN(19.3,0.13,3422,192),
     MAGNESIUM(1.74,1.02,650,368),
-
+    PLATINA(21.5,0.133,1768,133)
             ;
 
     double density;

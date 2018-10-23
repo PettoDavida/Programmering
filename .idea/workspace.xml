@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cccc0f64-e478-4f13-99b2-62fbccb9d7d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homework/Homework_Gastable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Homework_Gastable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Homework/Homework_Solidtable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Homework_Solidtable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homework/Homework_liquidtable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Homework_liquidtable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homework/Homework_v_43_45.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,13 +43,13 @@
         <counts>
           <entry key="Loops" value="22" />
           <entry key="dummy" value="25" />
-          <entry key="java" value="4316" />
+          <entry key="java" value="4699" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4338" />
+          <entry key="JAVA" value="4721" />
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
@@ -59,16 +58,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Homework/Homework_v_43_45.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="136">
+              <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Homework/Homework_liquidtable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -81,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Gastable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -90,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Solidtable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -133,9 +132,10 @@
         <option value="$PROJECT_DIR$/src/Metoder/DeathKnightHero.java" />
         <option value="$PROJECT_DIR$/src/Homework/Homework_library.java" />
         <option value="$PROJECT_DIR$/src/Homework/Homework_v_43_45.java" />
-        <option value="$PROJECT_DIR$/src/Homework/Homework_Solidtable.java" />
         <option value="$PROJECT_DIR$/src/Homework/Homework_Gastable.java" />
         <option value="$PROJECT_DIR$/src/Homework/Homework_liquidtable.java" />
+        <option value="$PROJECT_DIR$/src/Homework/Homework_Solidtable.java" />
+        <option value="$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java" />
       </list>
     </option>
   </component>
@@ -180,7 +180,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540279787211" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540281018767" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -317,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540279597099</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Wow">
+      <created>1540280101606</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540280101606</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -465,31 +472,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_v_43_45.java">
+    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_liquidtable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="85">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Solidtable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Gastable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_liquidtable.java">
+    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        <state relative-caret-position="136">
+          <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
         </state>
       </provider>
     </entry>
