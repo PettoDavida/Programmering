@@ -108,7 +108,16 @@ public class Homework_physicslibrary {
         return (fluid.density * volume);
     }
 
+    /**
+     * Omvandling av en gas vid en viss volym till massa
+     * @param gas vald gas
+     * @param volume vald volym
+     * @return massan av gasen vid den valda volymen
+     */
+    public static double volumeToMass(Homework_Gastable gas, double volume){
 
+        return (gas.density * volume);
+    }
 
 
 }
