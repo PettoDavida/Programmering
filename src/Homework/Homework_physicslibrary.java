@@ -97,6 +97,17 @@ public class Homework_physicslibrary {
         return (last - first);
     }
 
+    /**
+     * omvandla en vätska till massa
+     * @param fluid vätskan du vill omvandla
+     * @param volume volymen du vill omvandla
+     * @return en vätska i en viss volym omvandlad till massa
+     */
+    public static double volumeToMass(Homework_liquidtable fluid, double volume){
+
+        return (fluid.density * volume);
+    }
+
 
 
 
