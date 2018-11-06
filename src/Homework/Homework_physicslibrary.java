@@ -76,5 +76,17 @@ public class Homework_physicslibrary {
         return (mass * g * height);
     }
 
+    /**
+     * Beräkning av ett objekts fart vid en utsatt höjd
+     * @param height höjden objektet ska falla från
+     * @return farten av objektet
+     */
+    public static double fallSpeed(double height){
+
+        return Math.sqrt(2 * height * g);
+    }
+
+
+
 
 }
