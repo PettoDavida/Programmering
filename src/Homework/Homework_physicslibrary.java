@@ -86,6 +86,17 @@ public class Homework_physicslibrary {
         return Math.sqrt(2 * height * g);
     }
 
+    /**
+     * Skillnaden mellan två olika tal
+     * @param first Ett tal
+     * @param last Ett annat tal
+     * @return skillnaden av de två talen
+     */
+    public static double delta(double first, double last){
+
+        return (last - first);
+    }
+
 
 
 
