@@ -65,5 +65,16 @@ public class Homework_physicslibrary {
         return (mass * Math.pow(velocity, 2)/2);
     }
 
+    /**
+     * Uträkning av den potentiella energin av ett objekt vid en viss höjg
+     * @param mass objektets vikt
+     * @param height höjden ett objekt startar vid
+     * @return Potentiella energin av objektet
+     */
+    public static double potentialEnergy(double mass, double height){
+
+        return (mass * g * height);
+    }
+
 
 }
