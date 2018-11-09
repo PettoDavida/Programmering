@@ -119,5 +119,15 @@ public class Homework_physicslibrary {
         return (gas.density * volume);
     }
 
+    /**
+     * omvandlar ett objekt av en volym till en massa
+     * @param solid objekt
+     * @param volume Volym av objekt
+     * @return massan av ett objekt vid en viss volym
+     */
+    public static double volumeToMass(Homework_Solidtable solid, double volume) {
+
+        return (solid.density * volume);
+    }
 
 }
