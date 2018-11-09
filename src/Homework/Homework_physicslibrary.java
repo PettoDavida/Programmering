@@ -151,4 +151,16 @@ public class Homework_physicslibrary {
 
         return (velocity * time);
     }
+
+    /**
+     * Omvandlar längd och fart till tid
+     * @param distance längd
+     * @param velocity fart
+     * @return tiden
+     */
+    public static double svtTime(double distance, double velocity) {
+
+        return (distance / velocity);
+    }
+
 }
