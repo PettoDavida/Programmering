@@ -130,4 +130,17 @@ public class Homework_physicslibrary {
         return (solid.density * volume);
     }
 
+    /**
+     * omvandlar en viss längd och tid till fart
+     * @param distance längd
+     * @param time tid
+     * @return farten av ett objekt
+     */
+    public static double svtVelocity(double distance, double time) {
+
+        return (distance / time);
+    }
+
+
+
 }
