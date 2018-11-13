@@ -163,4 +163,14 @@ public class Homework_physicslibrary {
         return (distance / velocity);
     }
 
+    /**
+     * omvandlar kraft och längd till arbete
+     * @param force kraft
+     * @param distance längd
+     * @return arbete
+     */
+    public static double work(double force, double distance) {
+
+        return (force * distance);
+    }
 }
