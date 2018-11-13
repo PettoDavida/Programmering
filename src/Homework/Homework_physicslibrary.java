@@ -220,4 +220,14 @@ public class Homework_physicslibrary {
 
         return (volume * gas.heatCapacity * deltaT);
     }
+
+    /**
+     * Hur långt ett objekt har fallit med en konstant acceleration
+     * @param velocity hastighet
+     * @return längden objektet har fallit
+     */
+    public static double velocityToHeight(double velocity) {
+
+        return (Math.pow(velocity, 2.0) / (g_swe * 2.0));
+    }
 }
