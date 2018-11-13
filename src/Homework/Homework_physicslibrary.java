@@ -233,5 +233,14 @@ public class Homework_physicslibrary {
 
     //Notering: Egna metoder
 
+    /**
+     *
+     * @param kmh
+     * @return
+     */
+    public static double convertKMHToMS(double kmh) {
+
+        return (kmh / 3.6);
+    }
 
 }
