@@ -230,4 +230,8 @@ public class Homework_physicslibrary {
 
         return (Math.pow(velocity, 2.0) / (g_swe * 2.0));
     }
+
+    //Notering: Egna metoder
+
+
 }
