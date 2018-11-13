@@ -184,4 +184,16 @@ public class Homework_physicslibrary {
 
         return (work / time);
     }
+
+    /**
+     * Beräknar hur mycket energi man  behöver för att värma ett material till en viss temp.
+     * @param solid material
+     * @param mass massan
+     * @param deltaT temperatur
+     * @return Energin
+     */
+    public static double heat(Homework_Solidtable solid, double mass, double deltaT) {
+
+        return (mass * solid.heatCapacity * deltaT);
+    }
 }
