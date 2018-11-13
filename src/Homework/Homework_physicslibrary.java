@@ -173,4 +173,15 @@ public class Homework_physicslibrary {
 
         return (force * distance);
     }
+
+    /**
+     * Beräknar hur mycket kraft som behövs
+     * @param work arbete
+     * @param time tid
+     * @return kraft
+     */
+    public static double power(double work, double time) {
+
+        return (work / time);
+    }
 }
