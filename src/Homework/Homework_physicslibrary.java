@@ -188,7 +188,7 @@ public class Homework_physicslibrary {
     /**
      * Beräknar hur mycket energi man  behöver för att värma ett material till en viss temp.
      * @param solid material
-     * @param mass massan
+     * @param mass massa av material
      * @param deltaT temperaturen du vill ha
      * @return Energin som krävs för att värma upp
      */
@@ -200,12 +200,24 @@ public class Homework_physicslibrary {
     /**
      * Beräknar hur mycket energi man  behöver för att värma en vätska till en viss temp.
      * @param fluid vätskan
-     * @param volume volymen
+     * @param volume volym av vätskan
      * @param deltaT temperaturn du vill komma till
      * @return Energin för att värma upp vätskan
      */
     public static double heat(Homework_liquidtable fluid, double volume, double deltaT) {
 
         return (volume * fluid.heatCapacity * deltaT);
+    }
+
+    /**
+     * Beräknar hur mycket energi man  behöver för att värma en gas till en viss temp.
+     * @param gas gasen
+     * @param volume volym av gasen
+     * @param deltaT temperaturn man vill komma till
+     * @return Energin för att värma upp gasen
+     */
+    public static double heat(Homework_Gastable gas, double volume, double deltaT) {
+
+        return (volume * gas.heatCapacity * deltaT);
     }
 }
