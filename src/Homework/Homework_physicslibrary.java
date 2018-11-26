@@ -243,4 +243,12 @@ public class Homework_physicslibrary {
         return (kmh / 3.6);
     }
 
+    /**
+     * Omvandlar meter per sekund till km per timme
+     * @param ms fart i meter per sekund
+     * @return km per timme
+     */
+    public static double convertMSToKMH(double ms) {
+        return ms * 3.6;
+    }
 }
