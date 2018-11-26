@@ -251,4 +251,14 @@ public class Homework_physicslibrary {
     public static double convertMSToKMH(double ms) {
         return ms * 3.6;
     }
+
+    /**
+     * Newtons andra lag: beräknar kraften av ett objekt
+     * @param mass massa av objektet
+     * @param acceleration acceleration
+     * @return kraft av objekt
+     */
+    public static double force(double mass, double acceleration) {
+        return mass * acceleration;
+    }
 }
