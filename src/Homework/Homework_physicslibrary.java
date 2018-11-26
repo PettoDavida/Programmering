@@ -273,6 +273,15 @@ public class Homework_physicslibrary {
         return g * ((mass1 * mass2) / Math.pow(distance, 2));
     }
 
+    /**
+     * E=MC^2
+     * @param mass objektets massa
+     * @return energi
+     */
+    public static double emc2(double mass) {
+        return mass * (Math.pow(c, 2));
+    }
+
 
 
 
