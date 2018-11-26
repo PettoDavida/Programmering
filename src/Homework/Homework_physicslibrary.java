@@ -322,5 +322,16 @@ public class Homework_physicslibrary {
         return current * resistance;
     }
 
+    /**
+     * Ohms lag: beräkna motstånd
+     * @param voltage spänning
+     * @param current ström
+     * @return motstånd
+     */
+    public static double resistance(double voltage, double current) {
+        return voltage / current;
+    }
+
+
 
 }
