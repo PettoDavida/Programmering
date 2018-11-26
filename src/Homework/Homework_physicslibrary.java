@@ -261,4 +261,20 @@ public class Homework_physicslibrary {
     public static double force(double mass, double acceleration) {
         return mass * acceleration;
     }
+
+    /**
+     * Newtons lag av gravitation: beräknar partiklars gravitetiska påverkan på varandra
+     * @param mass1 massan av ett objekt
+     * @param mass2 massan av andra objektet
+     * @param distance längden mellan objekten
+     * @return gravitations kraften
+     */
+    public static double gravity(double mass1, double mass2, double distance) {
+        return g * ((mass1 * mass2) / Math.pow(distance, 2));
+    }
+
+
+
+
+
 }
