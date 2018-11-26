@@ -47,13 +47,13 @@
         <counts>
           <entry key="Loops" value="22" />
           <entry key="dummy" value="25" />
-          <entry key="java" value="11079" />
+          <entry key="java" value="11170" />
           <entry key="txt" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11101" />
+          <entry key="JAVA" value="11192" />
           <entry key="PLAIN_TEXT" value="59" />
         </counts>
       </usages-collector>
@@ -65,8 +65,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="298" column="22" selection-start-line="298" selection-start-column="22" selection-end-line="298" selection-end-column="22" />
+            <state relative-caret-position="504">
+              <caret line="315" column="25" selection-start-line="315" selection-start-column="25" selection-end-line="315" selection-end-column="25" />
               <folding>
                 <element signature="e#6977#6978#0" expanded="true" />
                 <element signature="e#7008#7009#0" expanded="true" />
@@ -78,6 +78,10 @@
                 <element signature="e#8185#8186#0" expanded="true" />
                 <element signature="e#8400#8401#0" expanded="true" />
                 <element signature="e#8435#8436#0" expanded="true" />
+                <element signature="e#8646#8647#0" expanded="true" />
+                <element signature="e#8689#8690#0" expanded="true" />
+                <element signature="e#8889#8890#0" expanded="true" />
+                <element signature="e#8932#8933#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -525,7 +529,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543240311615</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Nya Metoder">
+      <created>1543240815269</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1543240815269</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Nya Metoder">
+      <created>1543241246387</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1543241246387</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -770,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="298" column="22" selection-start-line="298" selection-start-column="22" selection-end-line="298" selection-end-column="22" />
+        <state relative-caret-position="504">
+          <caret line="315" column="25" selection-start-line="315" selection-start-column="25" selection-end-line="315" selection-end-column="25" />
           <folding>
             <element signature="e#6977#6978#0" expanded="true" />
             <element signature="e#7008#7009#0" expanded="true" />
@@ -783,6 +801,10 @@
             <element signature="e#8185#8186#0" expanded="true" />
             <element signature="e#8400#8401#0" expanded="true" />
             <element signature="e#8435#8436#0" expanded="true" />
+            <element signature="e#8646#8647#0" expanded="true" />
+            <element signature="e#8689#8690#0" expanded="true" />
+            <element signature="e#8889#8890#0" expanded="true" />
+            <element signature="e#8932#8933#0" expanded="true" />
           </folding>
         </state>
       </provider>
