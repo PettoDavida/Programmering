@@ -282,8 +282,25 @@ public class Homework_physicslibrary {
         return mass * (Math.pow(c, 2));
     }
 
+    /**
+     * beräknar densiteten
+     * @param mass massa
+     * @param volume volym
+     * @return Densiteten
+     */
+    public static double density(double mass, double volume) {
+        return mass / volume;
+    }
 
-
+    /**
+     * beräknar tryck på en area
+     * @param force kraften som trycker på arean
+     * @param area arean
+     * @return trycket
+     */
+    public static double pressure(double force, double area) {
+        return force / area;
+    }
 
 
 }
