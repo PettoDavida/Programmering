@@ -234,9 +234,9 @@ public class Homework_physicslibrary {
     //Notering: Egna metoder
 
     /**
-     *
-     * @param kmh
-     * @return
+     * Omvandlar km per timma till meter per sekund
+     * @param kmh fart i km/h
+     * @return meter/sekund
      */
     public static double convertKMHToMS(double kmh) {
 
