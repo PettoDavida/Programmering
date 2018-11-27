@@ -257,7 +257,7 @@ public class Homework_physicslibrary {
     }
 
     /**
-     * Newtons lag av gravitation: beräknar partiklars gravitetiska påverkan på varandra
+     * Newtons lag av gravitation: beräknar objekts gravitetiska påverkan på varandra
      * @param mass1 massan av ett objekt
      * @param mass2 massan av andra objektet
      * @param distance längden mellan objekten
