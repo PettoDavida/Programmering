@@ -1,9 +1,12 @@
 package Homework;
 
+import java.util.Scanner;
+
 public class Homework_Questions {
 
     public static void main(String args[]){
 
+        Scanner input = new Scanner(System.in);
         /**
          * Hur mycket väger 80 dm^3 järn?
          */
@@ -95,6 +98,39 @@ public class Homework_Questions {
 
         System.out.println("En studsboll släpps från 10 meters höjd och varje gång den nuddar marken tappar den 1% av sin energi. Hur många gånger kommer bollen studsa i marken innan den inte studsar hörge än 0.5 meter?");
         System.out.println(result);
+
+        /**
+         *  Jorden väger 5972000000000000000000000 kg och solen väger 1989000000000000000000000000000 kg och de är 149 600 000 km mellan de. Hur mycket påverkar de varandra?
+         */
+
+        result = Homework_physicslibrary.gravity(5.972 * Math.pow(10, 24), 1.989 * Math.pow(10, 30), 149600000);
+
+        System.out.println("Jorden väger 5972000000000000000000000 kg och solen väger 1989000000000000000000000000000 kg och de är 149 600 000 km mellan de. Hur mycket påverkar de varandra?");
+        System.out.println(result);
+
+        /**
+         * Hur mycket energi har jorden?
+         */
+
+        result = Homework_physicslibrary.emc2(5.972 * Math.pow(10, 24));
+
+        System.out.println("Hur mycket energi har jorden?");
+        System.out.println(result);
+
+        /**
+         * Hur mycket energi har valfri planet?
+         */
+
+        System.out.println("Hur mycket energi har valfri planet?");
+
+        String planetStr = input.next();
+        Homework_Planettable planet = Homework_Planettable.valueOf(planetStr.toUpperCase());
+
+        result = Homework_physicslibrary.emc2(planet.mass);
+
+        System.out.println(result);
+
+
 
 
     }
