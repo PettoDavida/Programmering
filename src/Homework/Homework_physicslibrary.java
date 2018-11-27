@@ -8,12 +8,6 @@ public class Homework_physicslibrary {
     static final double c=299792458;     // Ljusetshastighet (m/s)
     static final double g_swe=9.82;      //Tyngdacceleration i Sverige (m/s)
 
-    public static void main(String args[]){
-
-
-
-    }
-
     /**
      * Tar in fahrenheit och konverterar till celsius
      * @param fahrenheit är en input av grader i fahrenheit
