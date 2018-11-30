@@ -7,7 +7,7 @@ public class Homework_v_48 {
         System.out.println(volume(11));
         System.out.println(reverse("Boi"));
         System.out.println(count("abcabcabcabcabcabcabc", 'c'));
-        System.out.println(pirater("maximilian"));
+        System.out.println(pirater("maximilian widman"));
     }
     public static double volume(double radius){  return (4 * Math.PI * Math.pow(radius, 3))/ 3;
     }
@@ -29,7 +29,7 @@ public class Homework_v_48 {
         return hej;
     }
     public static String pirater(String str){
-        char konsonant[] = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'z', 'x' };
+        char konsonant[] = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'w', 'v', 'z', 'x' };
         String result = "";
         for(int i = 0; i < str.length(); i++) {
             boolean found = false;
