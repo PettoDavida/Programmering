@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cccc0f64-e478-4f13-99b2-62fbccb9d7d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Homework/Homework_Planettable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Homework/Homework_physicslibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmering-Lööps/Homework/Homework_physicslibrary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homework/Homework_Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Homework_Questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Homework/Homework_Questions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmering-Lööps/Homework/Homework_Questions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homework/Homework_v_41.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Homework_v_41.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,41 +20,43 @@
     <session id="1098813011">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="4" />
-          <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.open.time.9" value="5" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Loops" value="1" />
+          <entry key="Loops" value="2" />
           <entry key="class" value="1" />
-          <entry key="java" value="56" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="64" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="57" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Loops" value="22" />
           <entry key="dummy" value="35" />
-          <entry key="java" value="13125" />
+          <entry key="java" value="13146" />
           <entry key="txt" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13147" />
+          <entry key="JAVA" value="13168" />
           <entry key="PLAIN_TEXT" value="69" />
         </counts>
       </usages-collector>
@@ -67,35 +68,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="4335">
               <caret line="259" column="51" selection-start-line="259" selection-start-column="51" selection-end-line="259" selection-end-column="51" />
-              <folding>
-                <element signature="e#6977#6978#0" expanded="true" />
-                <element signature="e#7008#7009#0" expanded="true" />
-                <element signature="e#7343#7344#0" expanded="true" />
-                <element signature="e#7385#7386#0" expanded="true" />
-                <element signature="e#7990#7991#0" expanded="true" />
-                <element signature="e#8046#8047#0" expanded="true" />
-                <element signature="e#8149#8150#0" expanded="true" />
-                <element signature="e#8185#8186#0" expanded="true" />
-                <element signature="e#8400#8401#0" expanded="true" />
-                <element signature="e#8435#8436#0" expanded="true" />
-                <element signature="e#8646#8647#0" expanded="true" />
-                <element signature="e#8689#8690#0" expanded="true" />
-                <element signature="e#8889#8890#0" expanded="true" />
-                <element signature="e#8932#8933#0" expanded="true" />
-                <element signature="e#9142#9143#0" expanded="true" />
-                <element signature="e#9182#9183#0" expanded="true" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Questions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="130" column="35" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Questions.java">
+        <entry file="file://$PROJECT_DIR$/src/Homework/Homework_v_41.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="130" column="35" lean-forward="true" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
+            <state relative-caret-position="221">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -105,10 +97,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="17" selection-start-column="17" selection-end-column="17" />
-              <folding>
-                <element signature="e#271#272#0" expanded="true" />
-                <element signature="e#297#298#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -172,10 +160,10 @@
         <option value="$PROJECT_DIR$/src/Metoder/DeathKnight.java" />
         <option value="$PROJECT_DIR$/src/Homework/Läxor3.java" />
         <option value="$PROJECT_DIR$/src/Lööps/THORESSON.java" />
-        <option value="$PROJECT_DIR$/src/Homework/Homework_v_41.java" />
         <option value="$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java" />
         <option value="$PROJECT_DIR$/src/Homework/Homework_Planettable.java" />
         <option value="$PROJECT_DIR$/src/Homework/Homework_Questions.java" />
+        <option value="$PROJECT_DIR$/src/Homework/Homework_v_41.java" />
       </list>
     </option>
   </component>
@@ -194,6 +182,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,28 +201,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Homework" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Programmering-Lööps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Programmering-Lööps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Lööps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Programmering-Lööps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Programmering-Lööps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Metoder" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="settings&#9;ACTION&#9;WelcomeScreen.Settings" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543324706162" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543585770435" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -270,8 +246,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework_v_41" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Homework.Homework_v_41" />
+    <configuration name="Homework_v_48" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework.Homework_v_48" />
       <module name="Programmering-Lööps" />
       <extension name="coverage">
         <pattern>
@@ -310,7 +286,7 @@
       </method>
     </configuration>
     <configuration name="Unnamed" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Homework.Homework_Questions" />
+      <option name="MAIN_CLASS_NAME" value="Homework.Homework_v_48" />
       <module name="Programmering-Lööps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -318,7 +294,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.Homework_v_41" />
+      <item itemvalue="Application.Homework_v_48" />
       <item itemvalue="Application.Method5" />
       <item itemvalue="Application.Method6" />
       <item itemvalue="Application.DeathKnightHero" />
@@ -328,7 +304,7 @@
         <item itemvalue="Application.DeathKnightHero" />
         <item itemvalue="Application.Method6" />
         <item itemvalue="Application.Method5" />
-        <item itemvalue="Application.Homework_v_41" />
+        <item itemvalue="Application.Homework_v_48" />
       </list>
     </recent_temporary>
   </component>
@@ -609,14 +585,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543307139606</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Nya Metoder">
+      <created>1543324713295</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1543324713295</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1738255" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19194631" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -683,45 +666,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Nya Metoder" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Loops">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/Methods/Method.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -765,13 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Methodd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -845,24 +786,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Homework/Läxor6.java">
+    <entry file="file://$PROJECT_DIR$/src/Lööps/Medelvärde.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method6.java">
+    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_v_41.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+        <state relative-caret-position="4335">
+          <caret line="259" column="51" selection-start-line="259" selection-start-column="51" selection-end-line="259" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -873,53 +807,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="259" column="51" selection-start-line="259" selection-start-column="51" selection-end-line="259" selection-end-column="51" />
-          <folding>
-            <element signature="e#6977#6978#0" expanded="true" />
-            <element signature="e#7008#7009#0" expanded="true" />
-            <element signature="e#7343#7344#0" expanded="true" />
-            <element signature="e#7385#7386#0" expanded="true" />
-            <element signature="e#7990#7991#0" expanded="true" />
-            <element signature="e#8046#8047#0" expanded="true" />
-            <element signature="e#8149#8150#0" expanded="true" />
-            <element signature="e#8185#8186#0" expanded="true" />
-            <element signature="e#8400#8401#0" expanded="true" />
-            <element signature="e#8435#8436#0" expanded="true" />
-            <element signature="e#8646#8647#0" expanded="true" />
-            <element signature="e#8689#8690#0" expanded="true" />
-            <element signature="e#8889#8890#0" expanded="true" />
-            <element signature="e#8932#8933#0" expanded="true" />
-            <element signature="e#9142#9143#0" expanded="true" />
-            <element signature="e#9182#9183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lööps/Medelvärde.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Planettable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" selection-start-column="17" selection-end-column="17" />
-          <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Homework/Läxor6.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metoder/Method2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metoder/Method3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metoder/Method4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metoder/Method5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metoder/Method6.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Metoder/Methodd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programmering-Lööps.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Loops">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Questions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="130" column="35" lean-forward="true" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
+        <state relative-caret-position="436">
+          <caret line="130" column="35" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_v_41.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>

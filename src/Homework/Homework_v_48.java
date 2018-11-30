@@ -1,12 +1,12 @@
 package Homework;
 
-public class Homework_v_41 {
+public class Homework_v_48 {
 
     public static void main(String args[]){
 
         System.out.println(volume(11));
         System.out.println(reverse("Boi"));
-        System.out.println(count("bock", 'c'));
+        System.out.println(count("abcabcabcabcabcabcabc", 'c'));
         System.out.println(pirater("maximilian"));
     }
     public static double volume(double radius){  return (4 * Math.PI * Math.pow(radius, 3))/ 3;
