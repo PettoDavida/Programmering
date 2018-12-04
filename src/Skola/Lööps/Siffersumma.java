@@ -1,4 +1,4 @@
-package Lööps;
+package Skola.Lööps;
 
 import java.util.Scanner;
 

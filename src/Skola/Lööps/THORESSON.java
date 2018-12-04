@@ -1,32 +1,41 @@
-package Lööps;
+package Skola.Lööps;
 
 import java.util.Scanner;
 
-public class Multiplikation {
+public class THORESSON {
 
-    public static void main(String args[]) {
+    public static void main(String args[]){
 
         Scanner input = new Scanner(System.in);
 
-        int counter = 0;
         int resultat = 1;
 
-        while (true) {
+        int counter = 0;
+
+        while(true){
+
             int x = input.nextInt();
+
             counter++;
-            if (counter == 10) {
+
+            if(counter == 10){
+
                 break;
+
             }
+
             resultat *= x;
+
             if (resultat > 100000){
+
                 break;
+
             }
+
 
         }
 
-        System.out.println(resultat + " " + counter);
-
+        System.out.println("Resultat:" + resultat + " " + "Count:" + counter);
 
     }
-
 }

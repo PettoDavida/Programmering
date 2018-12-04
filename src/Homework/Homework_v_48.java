@@ -50,7 +50,7 @@ public class Homework_v_48 {
 
     /**
      * Översätter vanlig svenska till pirat språk
-     * @param str Nament eller saken du vill ha översatt
+     * @param str Namnet eller saken du vill ha översatt
      * @return valfritt ord i pirat språk
      */
     public static String pirater(String str){

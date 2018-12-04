@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Lööps/Siffersumma.java" line="20" />
+    <bookmark url="file://$PROJECT_DIR$/src/Skola/Lööps/Siffersumma.java" line="20" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cccc0f64-e478-4f13-99b2-62fbccb9d7d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Homework/Homework_v_48.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Homework_v_48.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Skola/Array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Homework/Homework_v_48.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmering-Lööps/Homework/Homework_v_48.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Lööps/Delbart_med_7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Lööps/Medelvärde.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Lööps/Minsta_tal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Lööps/Multiplikation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Lööps/Siffersumma.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Lööps/THORESSON.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Metoder/DeathKnight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Metoder/DeathKnightHero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Metoder/Method2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Metoder/Method3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Metoder/Method4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Metoder/Method5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Metoder/Method6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Metoder/Methodd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lööps/Delbart_med_7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Lööps/Delbart_med_7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lööps/Medelvärde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Lööps/Medelvärde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lööps/Minsta_tal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Lööps/Minsta_tal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lööps/Multiplikation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Lööps/Multiplikation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lööps/Siffersumma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Lööps/Siffersumma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lööps/THORESSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Lööps/THORESSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metoder/DeathKnight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Metoder/DeathKnight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metoder/DeathKnightHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Metoder/DeathKnightHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metoder/Method2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Metoder/Method2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metoder/Method3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Metoder/Method3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metoder/Method4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Metoder/Method4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metoder/Method5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Metoder/Method5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metoder/Method6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Metoder/Method6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Metoder/Methodd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/Metoder/Methodd.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,15 +48,15 @@
     <session id="1098813011">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="4" />
-          <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.open.time.9" value="6" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -34,27 +64,27 @@
           <entry key="Loops" value="2" />
           <entry key="class" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="64" />
+          <entry key="java" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="66" />
+          <entry key="JAVA" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Loops" value="22" />
           <entry key="dummy" value="37" />
-          <entry key="java" value="13682" />
+          <entry key="java" value="14232" />
           <entry key="txt" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13704" />
+          <entry key="JAVA" value="14254" />
           <entry key="PLAIN_TEXT" value="86" />
         </counts>
       </usages-collector>
@@ -75,17 +105,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Questions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
+            <state relative-caret-position="2210">
               <caret line="130" column="35" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Homework/Homework_v_48.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="374">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Skola/Array.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -113,8 +152,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -163,12 +202,13 @@
         <option value="$PROJECT_DIR$/src/Homework/Homework_Questions.java" />
         <option value="$PROJECT_DIR$/src/Homework/Homework_v_41.java" />
         <option value="$PROJECT_DIR$/src/Homework/Homework_v_48.java" />
+        <option value="$PROJECT_DIR$/src/Skola/Array.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
+    <option name="x" value="840" />
+    <option name="y" value="-34" />
     <option name="width" value="980" />
     <option name="height" value="550" />
   </component>
@@ -181,7 +221,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,23 +237,27 @@
               <item name="Programmering-Lööps" type="b2602c69:ProjectViewProjectNode" />
               <item name="Programmering-Lööps" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Homework" type="462c0819:PsiDirectoryNode" />
+              <item name="Skola" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="settings&#9;ACTION&#9;WelcomeScreen.Settings" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543586897927" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543846962073" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Skola" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\usr\IdeaProjects\Programmering-Lööps\out\production\Methods" />
     </key>
@@ -233,11 +276,11 @@
   </component>
   <component name="RunManager" selected="Application.Unnamed">
     <configuration name="DeathKnightHero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Metoder.DeathKnightHero" />
+      <option name="MAIN_CLASS_NAME" value="Skola.Metoder.DeathKnightHero" />
       <module name="Programmering-Lööps" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Metoder.*" />
+          <option name="PATTERN" value="Skola.Metoder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -259,11 +302,11 @@
       </method>
     </configuration>
     <configuration name="Method5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Metoder.Method5" />
+      <option name="MAIN_CLASS_NAME" value="Skola.Metoder.Method5" />
       <module name="Programmering-Lööps" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Metoder.*" />
+          <option name="PATTERN" value="Skola.Metoder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -272,11 +315,11 @@
       </method>
     </configuration>
     <configuration name="Method6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Metoder.Method6" />
+      <option name="MAIN_CLASS_NAME" value="Skola.Metoder.Method6" />
       <module name="Programmering-Lööps" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Metoder.*" />
+          <option name="PATTERN" value="Skola.Metoder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -285,7 +328,7 @@
       </method>
     </configuration>
     <configuration name="Unnamed" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Homework.Homework_v_48" />
+      <option name="MAIN_CLASS_NAME" value="Skola.Array" />
       <module name="Programmering-Lööps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -605,14 +648,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543585872321</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Läxa Vecka.48">
+      <created>1543586902228</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1543586902228</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19194631" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19463088" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -621,12 +671,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34468085" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34184396" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32998565" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32907802" />
@@ -702,28 +752,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lööps/Multiplikation.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Lööps/Multiplikation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lööps/Delbart_med_7.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Lööps/Delbart_med_7.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lööps/Siffersumma.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Lööps/Siffersumma.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lööps/Minsta_tal.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Lööps/Minsta_tal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -744,14 +794,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/DeathKnightHero.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Metoder/DeathKnightHero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/DeathKnight.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Metoder/DeathKnight.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
           <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
@@ -779,7 +829,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lööps/THORESSON.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Lööps/THORESSON.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="623">
           <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
@@ -800,31 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lööps/Medelvärde.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Lööps/Medelvärde.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4335">
-          <caret line="259" column="51" selection-start-line="259" selection-start-column="51" selection-end-line="259" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Solidtable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Planettable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -835,42 +864,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method2.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Metoder/Method2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method3.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Metoder/Method3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method4.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Metoder/Method4.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method5.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Metoder/Method5.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Method6.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Metoder/Method6.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Metoder/Methodd.java">
+    <entry file="file://$PROJECT_DIR$/src/Skola/Metoder/Methodd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
@@ -887,17 +916,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_physicslibrary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4335">
+          <caret line="259" column="51" selection-start-line="259" selection-start-column="51" selection-end-line="259" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Questions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
+        <state relative-caret-position="2210">
           <caret line="130" column="35" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Homework/Homework_v_48.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="374">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Planettable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Homework/Homework_Solidtable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skola/Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>

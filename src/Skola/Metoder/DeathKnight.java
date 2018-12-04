@@ -1,4 +1,4 @@
-package Metoder;
+package Skola.Metoder;
 
 import java.util.ArrayList;
 import java.util.List;

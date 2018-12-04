@@ -1,4 +1,4 @@
-package Metoder;
+package Skola.Metoder;
 
 public class Method6 {
 
