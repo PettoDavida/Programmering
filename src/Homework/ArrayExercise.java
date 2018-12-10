@@ -1,4 +1,4 @@
-package Skola;
+package Homework;
 
 
 import java.util.Arrays;
