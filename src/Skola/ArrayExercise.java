@@ -15,7 +15,16 @@ public class ArrayExercise {
 
         System.out.println(one());
         System.out.println(two());
-        System.out.println(three());
+        int[] result = three();
+
+        int minNumber = result[0];
+        int minFreq = result[1];
+
+        int maxNumber = result[2];
+        int maxFreq = result[3];
+
+        System.out.printf("\t Minst: %d:or med %dst och flest: %d:or med %dst\n", minNumber, minFreq, maxNumber, maxFreq);
+
         System.out.println(four());
         System.out.println(five());
         System.out.println(six());
@@ -114,13 +123,16 @@ public class ArrayExercise {
             return new int[] { minNumber, minFreq, maxNumber, maxFreq };
         }
 
-
+    /**
+     * På vilket index finns namnet Drusilla i names?
+     * @return nummret Drusilla kommer upp i names arrayen
+     */
     public static int four(){
 
         int counterfour = 0;
-        for (int i = 0; i < names.length; i++){
+        for (int i = 0; i < names.length; i++){ //Går genom hela names arrayen
 
-            if (names[i]=="Drusilla"){
+            if (names[i]=="Drusilla"){ // letar efter namnet Drusilla i arrayen och bryter loopem om den hittar Drusilla annars fortsätter den
                 break;
             }
             else{
@@ -130,42 +142,54 @@ public class ArrayExercise {
 
         }
 
-        return counterfour;
+        return counterfour; // platsen namnet Drusilla ligger på
 
     }
 
+    /**
+     * Vad är summan av alla jämna tal i numbers?
+     * @return Summa av alla jämna tal
+     */
     public static int five(){
 
         int counterfive = 0;
-        for (int i = 0; i < numbers.length; i++){
+        for (int i = 0; i < numbers.length; i++){ // går genom hela numbers arrayen
 
             if (numbers[i]%2==0){
-                counterfive+=numbers[i];
+                counterfive+=numbers[i]; // adderar ihop numrerna som kan delas på två. Detta är för att de är jämna
             }
 
 
 
         }
 
-        return counterfive;
+        return counterfive; // totala summan av alla jämna tal
     }
 
+    /**
+     * Hur många namn börjar på bokstaven L i names?
+     * @return hur många namn som börjar på L
+     */
     public static int six(){
 
         int times = 0;
-        for(int i = 0; i < names.length; i++){
-            if (names[i].charAt(0) == 'L'){
+        for(int i = 0; i < names.length; i++){ // går genom hela names arrayen
+            if (names[i].charAt(0) == 'L'){ // lägger till 1 på times varje gång ett namn börjar på L
                 times++;
             }
         }
         return times;
     }
 
+    /**
+     * Hur många namn är fem bokstäver långa i names?
+     * @return Hur många namn som har 5 bokstäver
+     */
     public static int seven(){
 
         int times = 0;
-        for(int i = 0; i < names.length; i++){
-            if (names[i].length() == 5){
+        for(int i = 0; i < names.length; i++){ //går genom arrayen names
+             if (names[i].length() == 5){ // varje gång ett namn har 5 bokstäver i längd tå adderar den 1 till times
                 times++;
             }
         }
@@ -173,23 +197,32 @@ public class ArrayExercise {
 
     }
 
+    /**
+     * Hur många finns det av varje tal i numbers?
+     * (antal 1:or, antal 2:or ...)
+     * @return hur många som finns av respektive nummer mella 0-9
+     */
     public static int[] eight(){
 
         int[] list= new int[10];
 
-        for (int i = 0; i < numbers.length; i++ ){
+        for (int i = 0; i < numbers.length; i++ ){ //går genom arrayen numbers och lägger till de olika nummrerna på sin plats i list arrayen
             list[numbers[i]]++;
         }
     return list;
     }
 
+    /**
+     * Hur många unika namn finns det i names?
+     * @return hur många olika namn som finns
+     */
     public static int ninth(){
         int unique = 0;
-        for (int i = 0; i < names.length; i++) {
+        for (int i = 0; i < names.length; i++) { // går genom varje namn i arrayen names
 
             int j;
 
-            for (j = 0; j < names.length; j++ ){
+            for (j = 0; j < names.length; j++ ){ // kollar namnet och adderar 1 till unique om namnet inte har uppstått innan sen bryter den loopen när den har gått genom alla namn
                 if(names[i].equals(names[j])){
 
                     break;
@@ -204,16 +237,20 @@ public class ArrayExercise {
         return unique;
     }
 
+    /**
+     * Vilket är det namn som förekommer flest gånger i names?
+     * @return namnet som uppstår mest gånger
+     */
     public static String tenth(){
 
         int biggestloser = 0;
         int biggestgei = 0;
 
-        for (int i = 0; i < names.length; i++) {
+        for (int i = 0; i < names.length; i++) { // går genom hela arrayen names
 
             int most = 0;
 
-            for (int j = 0; j < names.length; j++) {
+            for (int j = 0; j < names.length; j++) { // går genom arrayen igen och om den hittar ett namn igen så adderas det på most
 
                 if (names[i].equals(names[j])){
                     most++;
@@ -222,8 +259,8 @@ public class ArrayExercise {
             }
 
             if (most > biggestloser){
-                biggestloser = most;
-                biggestgei = i;
+                biggestloser = most; // om most är större än biggestloser så ska biggestloser bli most
+                biggestgei = i; // namnet som ligger på nummret i är det som kommer upp mest och skickas tillbaka
             }
 
         }
