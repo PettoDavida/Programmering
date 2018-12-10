@@ -2,7 +2,6 @@ package Skola;
 
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class ArrayExercise {
 
@@ -27,77 +26,94 @@ public class ArrayExercise {
 
     }
 
+    /**
+     * Hur många 7:or finns det i numbers?
+     * @return Antal 7:or som finns
+     */
     public static int one(){
 
-        int counterone = 0;
-        for (int i = 0; i < numbers.length; i++){
+        int counterone = 0; //counter för hur många 7:or som finns
+        for (int i = 0; i < numbers.length; i++){ // går genom varje nummer i numbers
 
             if (numbers[i]==7){
-                counterone++;
+                counterone++; // lägger till 1 på countern för varje 7:a den hittar
             }
 
 
         }
 
-        return counterone;
+        return counterone; // hur många 7:or som finns
 }
 
+    /**
+     * Hur många personer som heter Tom finns det i names?
+     * @return personer som heter Tom i names
+     */
     public static int two(){
 
-        int countertwo = 0;
-        for (int i = 0; i < names.length; i++){
+        int countertwo = 0; // counter för hur många Tom som finns
+        for (int i = 0; i < names.length; i++){ // går genom varje namn i names
 
-            if (names[i]=="Tom"){
+            if (names[i]=="Tom"){ // adderar 1 för varje gång Tom dyker upp
                 countertwo++;
             }
 
 
         }
 
-        return countertwo;
+        return countertwo; // hur många Tom som finns i names
     }
 
+    /**
+     * Vilket nummer finns det flest respektive minst utav i numbers?
+     * @return De nummer som kommer upp flest gånger och minst gånger
+     */
     public static int[] three(){
 
-        int[] list= new int[10];
+            int[] List = Frequent();
 
-        int max = 0;
-        int maxnumber = 0;
+            int[] Index = new int[10];
+            for (int i = 0; i < Index.length; i++) {
+                Index[i] = i;
+            }
+            // Detta är en algorithm som tar t.ex. om vi har 5 3 9 2 0 så börjar den med 5 och 3 och kollar vilken som är
+            // minst och flytter den till vänster så att de minsta alltid är längst till vänster tills det inte går mer
+            // och då ska det se ut som så här 0 2 3 5 9
+            boolean stop = false;
+            while(!stop) {
+                int switches = 0;
 
-        int min = 0;
-        int minnumber = 0;
+                for (int i = 0; i < List.length; i++) {
+                    if (i < List.length - 1) {
+                        int first = List[i];
+                        int second = List[i + 1];
 
-        for (int i = 0; i < numbers.length; i++ ){
-            list[numbers[i]]++;
+                        if (first > second) {
+                            List[i] = second;
+                            List[i + 1] = first;
+
+                            int temp = Index[i];
+                            Index[i] = Index[i + 1];
+                            Index[i + 1] = temp;
+
+                            switches++;
+                        }
+                    }
+                }
+
+                if(switches == 0)
+                    stop = true;
+            }
+
+            int minFreq = List[0];
+            int minNumber = Index[0];
+
+            int maxFreq = List[List.length - 1];
+            int maxNumber = Index[Index.length - 1];
+
+            return new int[] { minNumber, minFreq, maxNumber, maxFreq };
         }
 
-        for (int i = 0; i < list.length; i++)
-        {
-            if(i == 0)
-            {
-                min = list[i];
-                continue;
-            }
-
-            if(list[i] > max)
-            {
-                max = list[i];
-                maxnumber = i;
-            }
-
-            if(list[i] <= min)
-            {
-                min = list[i - 1];
-                minnumber = i;
-            }
-
-        }
-
-        System.out.printf("Max number: %d %d ,", maxnumber, max);
-        System.out.printf("Min number: %d %d ", minnumber, min);
-
-        return new int[]{minnumber, maxnumber};
-    }
 
     public static int four(){
 
@@ -212,6 +228,20 @@ public class ArrayExercise {
 
         }
         return names[biggestgei];
+    }
+
+    /**
+     * Beräknar hur många gånger nummer uppstår
+     * @return antal nummer för de olika nummrena
+     */
+    private static int[] Frequent() {
+        int[] result = new int[10];
+
+        for (int i = 0; i < numbers.length; i++){
+            result[numbers[i]]++;
+        }
+
+        return result;
     }
 
 }
