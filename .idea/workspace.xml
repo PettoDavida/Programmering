@@ -217,7 +217,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="settings&#9;ACTION&#9;WelcomeScreen.Settings" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544449559015" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544449754115" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -297,7 +297,7 @@
       </method>
     </configuration>
     <configuration name="Unnamed" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Skola.ArrayExercise" />
+      <option name="MAIN_CLASS_NAME" value="Homework.ArrayExercise" />
       <module name="Programmering-Lööps" />
       <method v="2">
         <option name="Make" enabled="true" />
