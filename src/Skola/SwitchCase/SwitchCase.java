@@ -17,7 +17,7 @@ public class SwitchCase {
          * Jag ändrade så att welcome kommer först och sen så frågar den om vilken genre man vill ha i början av while loopen jag skapade
          * Jag skapade en boolean som är false tills man väljer 5 som är quit och detta gör att booleanen blir true som stoppar while loopen
          * While loopen gör att den frågar om varje gång man väljer en genre som inte är quit
-         * Loopen gör även om inten choice varje gång den inte quitar
+         * Loopen gör även om inten choice varje gång den inte quitar.
          */
         System.out.println("Welcome to movie inspiration database!");
 
