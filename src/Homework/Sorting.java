@@ -1,6 +1,6 @@
 package Homework;
 
-public class SelectionSort {
+public class Sorting {
 
     /**
      * Sorts the list with the Bubble Sort algorithm
