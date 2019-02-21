@@ -1,9 +1,17 @@
-package Kattis;
+package Skola;
 
 
 import java.util.Scanner;
 
-public class Racing_around_the_alphabet {
+public class GuessTheNumber {
+
+    private static int[][] difficulty = {
+        {0, 1, 100, -1}, //Lätt
+        {1, 1, 500, -1}, // Mellan
+        {2, 1, 400, 10}, // Svår
+        {3, 1, 1000, 1}, // Omöjlig
+        {4, 0, 0, 0} // Custom
+    };
 
     public static void main(String[] args){
 
@@ -15,14 +23,16 @@ public class Racing_around_the_alphabet {
         String bogdish = "";
         boolean nog = false;
         boolean nig = false;
-
+        int count = 0;
 
 
         do {
             while(!nog){
                 bogdan = tal.nextInt();
+                count++;
                 if(bogdan == dobondi){
-                    System.out.println("Rätt");
+                    System.out.println("Rätt!");
+                    System.out.println("Det tog bara " + count + "försök");
                     break;
                 }else if(bogdan > dobondi){
                     System.out.println("Lägre"); //Här printar den lägre om talet man gissat är större än talet man ska hitta
@@ -41,5 +51,6 @@ public class Racing_around_the_alphabet {
         }while(!nig);
 
     }
+
 
 }
