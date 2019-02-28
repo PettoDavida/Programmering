@@ -40,7 +40,6 @@ public class GuessTheNumber {
                     System.out.println("Högre"); //Här printar den högre om talet man gissat är lägre än talet man ska hitta
                 }
             }
-
             System.out.println("Vill du köra igen? Svara med ja eller nej.");
             bogdish = tal.nextLine();
             if (bogdish == "ja"){
