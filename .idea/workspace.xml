@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cccc0f64-e478-4f13-99b2-62fbccb9d7d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ArrayList/Arraylists.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Kattis/Racing_around_the_alphabet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Skola/GuessTheNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmering-Lööps/Skola/GuessTheNumber.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Skola/GuessTheNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/GuessTheNumber.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,11 +28,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Skola/GuessTheNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-372">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="85">
+              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ArrayList/Arraylists.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -71,6 +81,7 @@
     <findStrings>
       <find>freqList</find>
       <find>System.out.println(&quot;Would you like to choose again?&quot;);                     System.out.println(&quot;(1) - Yes&quot;);                     System.out.println(&quot;(2) - No&quot;);</find>
+      <find>dobondi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,12 +138,13 @@
         <option value="$PROJECT_DIR$/src/Kattis/Racing_around_the_alphabet.java" />
         <option value="$PROJECT_DIR$/src/Skola/Racing_around_the_alphabet.java" />
         <option value="$PROJECT_DIR$/src/Skola/GuessTheNumber.java" />
+        <option value="$PROJECT_DIR$/src/ArrayList/Arraylists.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="840" />
-    <option name="y" value="-35" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="776" />
+    <option name="y" value="-19" />
     <option name="width" value="980" />
     <option name="height" value="550" />
   </component>
@@ -144,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -157,22 +170,15 @@
               <item name="Programmering-Lööps" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Programmering-Lööps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Programmering-Lööps" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Skola" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="settings&#9;ACTION&#9;WelcomeScreen.Settings" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551261253135" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551963641813" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -252,7 +258,7 @@
       </method>
     </configuration>
     <configuration name="Unnamed" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Skola.GuessTheNumber" />
+      <option name="MAIN_CLASS_NAME" value="ArrayList.Arraylists" />
       <module name="Programmering-Lööps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -632,10 +638,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21073826" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16107382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -644,8 +650,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34135976" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39943343" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34135976" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -664,7 +670,7 @@
       <window_info anchor="right" id="Maven" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1738255" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.020134227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -672,16 +678,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34468085" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34135976" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32998565" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -689,7 +695,8 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="7" type="FLOATING" />
+      <window_info anchor="right" id="Maven" order="8" />
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
@@ -706,26 +713,8 @@
     <MESSAGE value="GuessTheNumber klar för användning" />
     <option name="LAST_COMMIT_MESSAGE" value="GuessTheNumber klar för användning" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Skola/GuessTheNumber.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/production/Methods/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Methods/Method.java" />
     <entry file="file://$PROJECT_DIR$/src/gey.java" />
     <entry file="file://$PROJECT_DIR$/src/Homework/Homework_liquidtable.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1011,8 +1000,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Skola/GuessTheNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-372">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        <state relative-caret-position="85">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArrayList/Arraylists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
