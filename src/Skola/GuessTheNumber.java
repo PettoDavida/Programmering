@@ -7,34 +7,39 @@ public class GuessTheNumber {
 
     /**
      * DIFFICULTY_X: Denna gör så att talen man skriver in när den frågar om vilken svårighetsgrad man vill ha konverteras till en svårighetsgrad
-     * bogdan: Talet man gissar med
-     * guesses: hur många gånger man får fråga innan den stoppar dig automatiskt
+     * YG: Talet man gissar med
      * times: hur många gånger man har gissat
-     * bogdish: det är den som kollas när man blir frågad om man vill spela igen
-     * bignig: När man gissar rätt så byts den till false och den frågar om man vill spela igen och om man säger ja så blir den true igen och du får köra igen
-     * nog: används bara för att en while loop ska vara igång
-     * nig: håller do-while loopen igång tills den blir true och den startar som false
+     * PA: det är den som kollas när man blir frågad om man vill spela igen
+     * GA: När man gissar rätt så byts den till false och den frågar om man vill spela igen och om man säger ja så blir den true igen och du får köra igen
+     * AC: används bara för att en while loop ska vara igång
+     * Run: Detta är variabeln som får spelet att köras och vara åging tills den blir true
      * count: räknar hur många gånger du har gissat
+     * result: Talet som bestämmer parametern man ska gissa inom
+     * dif: String variabeln som printas ut när den printar vad man valt som difficulty
+     * guess: String variabeln som printas ut när den printar hur många försök man har
+     * between: String variabeln som printas ut när den printar parametern man ska gissa inom som t.ex. 1 - 100
+     * tal: scannern som tar in allt man ska skriva i konsolen
+     * Input: talet man ska hitta
+     * difficulty: svårighetsgraden
      */
     public static final int DIFFICULTY_EASY = 1;
     public static final int DIFFICULTY_NORMAL = 2;
     public static final int DIFFICULTY_HARD = 3;
     public static final int DIFFICULTY_SUPER_HARD = 4;
     public static final int DIFFICULTY_CUSTOM = 5;
-    private static int bogdan = 0;
-    private static int guesses = 0;
+    private static int YG = 0;
     private static int times = 0;
-    private static String bogdish = "";
-    private static boolean bignig = true;
-    private static boolean nog = false;
-    private static boolean nig = false;
+    private static String PA = "";
+    private static boolean GA = true;
+    private static boolean AC = false;
+    private static boolean Run = false;
     private static int count = 0;
     private static int result = 0;
     private static String dif = "";
     private static String guess = "";
     private static String between = "";
     private static Scanner tal = new Scanner(System.in);
-    private static int dobondi;
+    private static int Input;
     private static int difficulty;
 
     public static void main(String[] args){
@@ -45,23 +50,23 @@ public class GuessTheNumber {
         System.out.println("Welcome to my game!");
         difficulties();
         do {
-            while(!nog) {
+            while(!AC) {
 
-                bogdan = tal.nextInt(); // tar in ett heltal
+                YG = tal.nextInt(); // tar in ett heltal
                 count++; // lägger till ett på count varje gång man gissar
 
-                if(bogdan == dobondi) { // Här kollar den om man har gissat rätt eller inte
+                if(YG == Input) { // Här kollar den om man har gissat rätt eller inte
                     System.out.println("Rätt!");
                     System.out.println("Det tog bara " + count + " försök");
-                    bignig = false;
+                    GA = false;
                     break;
-                }else if (count == guesses){ //Här så kollar den så att man håller sig inom försöken man får
+                }else if (count == times){ //Här så kollar den så att man håller sig inom försöken man får
                         System.out.println("För många försök");
-                        bignig = false;
+                        GA = false;
                         break;
-                }else if(bogdan > dobondi){ //Här tittar den om talet du gissat är större än det du ska hitta
+                }else if(YG > Input){ //Här tittar den om talet du gissat är större än det du ska hitta
                     System.out.println("Lower");
-                }else if (bogdan < dobondi){ //Här tittar den om talet du gissat är lägre än det du ska hitta
+                }else if (YG < Input){ //Här tittar den om talet du gissat är lägre än det du ska hitta
                     System.out.println("Higher");
                 }
             }
@@ -69,22 +74,22 @@ public class GuessTheNumber {
 
             do {
                 System.out.println("Do you want to play again? Y/N"); // Frågar om man vill spela igen
-                bogdish = tal.nextLine(); // Tar in svaret
-                if (bogdish.toLowerCase().equals("y")) { // kollar om det är y som betyder yes
+                PA = tal.nextLine(); // Tar in svaret
+                if (PA.toLowerCase().equals("y")) { // kollar om det är y som betyder yes
                     System.out.println("You chose to play again!");
                     count = 0;
                     difficulties();
-                    bignig = true;
+                    GA = true;
 
-                } else if (bogdish.toLowerCase().equals("n")) {// kollar om det är n som betyder no
+                } else if (PA.toLowerCase().equals("n")) {// kollar om det är n som betyder no
                     System.out.println("Goodbye");
-                    nig = true;
+                    Run = true;
                     break;
                 } else{ // här fortsätter loopen om man skriver in något som inte är y eller n
 
                 }
-            }while(!bignig);
-        }while(!nig);
+            }while(!GA);
+        }while(!Run);
 
     }
 
@@ -128,8 +133,7 @@ public class GuessTheNumber {
                 times = tal.nextInt();
             }
         }
-        dobondi = (int) (Math.random() * result) + 1;
-        guesses = times;
+        Input = (int) (Math.random() * result) + 1;
         if (difficulty == 1){
             dif = "Easy";
             guess = "Unlimited";

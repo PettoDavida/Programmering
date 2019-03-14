@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cccc0f64-e478-4f13-99b2-62fbccb9d7d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Kattis/SecureDoors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Skola/GuessTheNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmering-Lööps/Skola/GuessTheNumber.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Skola/GuessTheNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/GuessTheNumber.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Skola/GuessTheNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="131" column="24" lean-forward="true" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+            <state relative-caret-position="340">
+              <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -93,6 +93,10 @@
       <find>freqList</find>
       <find>System.out.println(&quot;Would you like to choose again?&quot;);                     System.out.println(&quot;(1) - Yes&quot;);                     System.out.println(&quot;(2) - No&quot;);</find>
       <find>dobondi</find>
+      <find>guesses</find>
+      <find>times</find>
+      <find>dif</find>
+      <find>bogdan</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,12 +194,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="settings&#9;ACTION&#9;WelcomeScreen.Settings" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552565759213" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552568382840" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -303,13 +307,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538136675223</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Wow">
-      <created>1540280101606</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1540280101606</updated>
     </task>
     <task id="LOCAL-00006" summary="Wow">
       <created>1540281027496</created>
@@ -647,7 +644,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551963686523</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Lägger till kommentarer">
+      <created>1552566202712</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1552566202712</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -662,8 +666,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34135976" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3243626" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -725,7 +729,8 @@
     <MESSAGE value="Programmering" />
     <MESSAGE value="GuessTheNumber klar för användning" />
     <MESSAGE value="Lagt till saker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lagt till saker" />
+    <MESSAGE value="Lägger till kommentarer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lägger till kommentarer" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/out/production/Methods/Method.java" />
@@ -1031,8 +1036,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Skola/GuessTheNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="131" column="24" lean-forward="true" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+        <state relative-caret-position="340">
+          <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
         </state>
       </provider>
     </entry>
