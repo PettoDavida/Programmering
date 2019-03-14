@@ -5,6 +5,17 @@ import java.util.Scanner;
 
 public class GuessTheNumber {
 
+    /**
+     * DIFFICULTY_X: Denna gör så att talen man skriver in när den frågar om vilken svårighetsgrad man vill ha konverteras till en svårighetsgrad
+     * bogdan: Talet man gissar med
+     * guesses: hur många gånger man får fråga innan den stoppar dig automatiskt
+     * times: hur många gånger man har gissat
+     * bogdish: det är den som kollas när man blir frågad om man vill spela igen
+     * bignig: När man gissar rätt så byts den till false och den frågar om man vill spela igen och om man säger ja så blir den true igen och du får köra igen
+     * nog: används bara för att en while loop ska vara igång
+     * nig: håller do-while loopen igång tills den blir true och den startar som false
+     * count: räknar hur många gånger du har gissat
+     */
     public static final int DIFFICULTY_EASY = 1;
     public static final int DIFFICULTY_NORMAL = 2;
     public static final int DIFFICULTY_HARD = 3;
@@ -14,7 +25,7 @@ public class GuessTheNumber {
     private static int guesses = 0;
     private static int times = 0;
     private static String bogdish = "";
-    private static boolean bignig = false;
+    private static boolean bignig = true;
     private static boolean nog = false;
     private static boolean nig = false;
     private static int count = 0;
@@ -60,15 +71,14 @@ public class GuessTheNumber {
                 System.out.println("Do you want to play again? Y/N"); // Frågar om man vill spela igen
                 bogdish = tal.nextLine(); // Tar in svaret
                 if (bogdish.toLowerCase().equals("y")) { // kollar om det är y som betyder yes
+                    System.out.println("You chose to play again!");
                     count = 0;
-                    nog = false;
                     difficulties();
                     bignig = true;
 
                 } else if (bogdish.toLowerCase().equals("n")) {// kollar om det är n som betyder no
                     System.out.println("Goodbye");
                     nig = true;
-                    nog = true;
                     break;
                 } else{ // här fortsätter loopen om man skriver in något som inte är y eller n
 
@@ -112,7 +122,9 @@ public class GuessTheNumber {
             break;
 
             case DIFFICULTY_CUSTOM: {
+                System.out.println("Choose your parameter for between 1-x. x being your number");
                 result = tal.nextInt();
+                System.out.println("Choose how many times you can guess");
                 times = tal.nextInt();
             }
         }
