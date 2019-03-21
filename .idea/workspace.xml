@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cccc0f64-e478-4f13-99b2-62fbccb9d7d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Programmering-Lööps/Skola/GuessTheNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Programmering-Lööps/Skola/GuessTheNumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Skola/GuessTheNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skola/GuessTheNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kattis/SecureDoors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kattis/SecureDoors.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Skola/GuessTheNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state relative-caret-position="697">
+              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -39,17 +38,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ArrayList/Arraylists.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Kattis/SecureDoors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="46" column="17" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,6 +96,7 @@
       <find>times</find>
       <find>dif</find>
       <find>bogdan</find>
+      <find>YG</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,14 +153,14 @@
         <option value="$PROJECT_DIR$/src/Kattis/Racing_around_the_alphabet.java" />
         <option value="$PROJECT_DIR$/src/Skola/Racing_around_the_alphabet.java" />
         <option value="$PROJECT_DIR$/src/ArrayList/Arraylists.java" />
-        <option value="$PROJECT_DIR$/src/Kattis/SecureDoors.java" />
         <option value="$PROJECT_DIR$/src/Skola/GuessTheNumber.java" />
+        <option value="$PROJECT_DIR$/src/Kattis/SecureDoors.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="776" />
-    <option name="y" value="-19" />
+    <option name="x" value="775" />
+    <option name="y" value="-20" />
     <option name="width" value="980" />
     <option name="height" value="550" />
   </component>
@@ -172,8 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,7 +194,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="settings&#9;ACTION&#9;WelcomeScreen.Settings" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552568451810" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553069181285" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -275,7 +275,7 @@
       </method>
     </configuration>
     <configuration name="Unnamed" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Skola.GuessTheNumber" />
+      <option name="MAIN_CLASS_NAME" value="Kattis.SecureDoors" />
       <module name="Programmering-Lööps" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -307,13 +307,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538136675223</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Wow">
-      <created>1540281027496</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1540281027496</updated>
     </task>
     <task id="LOCAL-00007" summary="Nya metoder">
       <created>1540558205604</created>
@@ -651,14 +644,20 @@
       <option name="project" value="LOCAL" />
       <updated>1552566202712</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Lagt till kommentarer och fixat variabel namn">
+      <created>1552568443846</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1552568443846</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16107382" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16308725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -667,7 +666,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3243626" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3243626" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -730,7 +729,8 @@
     <MESSAGE value="GuessTheNumber klar för användning" />
     <MESSAGE value="Lagt till saker" />
     <MESSAGE value="Lägger till kommentarer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lägger till kommentarer" />
+    <MESSAGE value="Lagt till kommentarer och fixat variabel namn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lagt till kommentarer och fixat variabel namn" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/out/production/Methods/Method.java" />
@@ -1000,6 +1000,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Skola/GuessTheNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ArrayList/Arraylists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/java/util/Scanner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16745">
@@ -1017,27 +1031,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArrayList/Arraylists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Kattis/SecureDoors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="46" column="17" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        <state relative-caret-position="272">
+          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Skola/GuessTheNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
         </state>
       </provider>
     </entry>
