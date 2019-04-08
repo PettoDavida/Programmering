@@ -4,7 +4,6 @@ using System.Threading;
 
 namespace HangMan
 {
-   
 
     class Program
     {
@@ -113,10 +112,51 @@ namespace HangMan
         static void Main(string[] args)
         {
 
-
             Console.WriteLine("");
 
-        ForbiddenMagic:
+            ForbiddenMagic:
+            Game();
+
+            if (wrongGuess.Count == art.Length - 1)
+            {
+                Console.WriteLine("You Lost!");
+                Console.WriteLine("The answer was: " + answer);
+                Console.WriteLine();
+            ForbiddenMagic2:
+                Console.WriteLine("Want to play again? Answer: yes or no");
+                string yesorno = Console.ReadLine();
+
+                if (yesorno.ToLower() == "yes")
+                {
+                    wrongGuess = new List<char>();
+                    goto ForbiddenMagic;
+                }
+                else if (yesorno.ToLower() == "no")
+                {
+                    running = false;
+                }
+                else
+                {
+                    Console.WriteLine("Please try again!");
+                    goto ForbiddenMagic2;
+                }
+
+            }
+
+            Console.WriteLine("Program stops in 5 seconds");
+            Thread.Sleep(5000);
+        }
+        public static void HangManArt(int j)
+        {
+            if (j < art.Length)
+            {
+                Console.WriteLine(art[j]);
+            }
+
+        }
+
+        public static void Game()
+        {
 
             wordindex = number.Next(0, Words.Count);
 
@@ -155,8 +195,15 @@ namespace HangMan
                 }
                 Console.WriteLine();
 
-                char guess = Console.ReadLine()[0];
-
+                char guess = ' ';
+                try
+                {
+                    guess = Console.ReadLine()[0];
+                }
+                catch (Exception e)
+                {
+                    goto Forbiddenmagic3;
+                }
 
 
                 bool added = false;
@@ -179,52 +226,11 @@ namespace HangMan
                         wrongGuess.Add(guess);
 
                 }
+            Forbiddenmagic3:
                 HangManArt(wrongGuess.Count);
 
 
-
-                if (wrongGuess.Count == art.Length - 1)
-                {
-                    Console.WriteLine("You Lost!");
-                    Console.WriteLine("The answer was: " + answer);
-                    Console.WriteLine();
-                ForbiddenMagic2:
-                    Console.WriteLine("Want to play again? Answer: yes or no");
-                    string yesorno = Console.ReadLine();
-
-                    if (yesorno.ToLower() == "yes")
-                    {
-                        wrongGuess = new List<char>();
-                        goto ForbiddenMagic;
-                    }
-                    else if (yesorno.ToLower() == "no")
-                    {
-                        running = false;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Please try again!");
-                        goto ForbiddenMagic2;
-                    }
-
-                }
             }
-                Console.WriteLine("Program stops in 5 seconds");
-                Thread.Sleep(5000);
-            
         }
-        public static void HangManArt(int j)
-        {
-            if (j < art.Length)
-            {
-                Console.WriteLine(art[j]);
-            }
-
-        }
-        public static void Game()
-        {
-
-            }
-        
     }
 }
