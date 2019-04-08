@@ -129,7 +129,31 @@ namespace HangMan
         ForbiddenMagic:
             Game();
 
-            PlayAgain();
+            if (wrongGuess.Count == art.Length - 1)
+            {
+                Console.WriteLine("You Lost!");
+                Console.WriteLine("The answer was: " + answer);
+                Console.WriteLine();
+            ForbiddenMagic2:
+                Console.WriteLine("Want to play again? Answer: yes or no");
+                string yesorno = Console.ReadLine();
+
+                if (yesorno.ToLower() == "yes")
+                {
+                    wrongGuess = new List<char>();
+                    goto ForbiddenMagic;
+                }
+                else if (yesorno.ToLower() == "no")
+                {
+                    running = false;
+                }
+                else
+                {
+                    Console.WriteLine("Please try again!");
+                    goto ForbiddenMagic2;
+                }
+
+            }
 
             Console.WriteLine("Program stops in 5 seconds");
             Thread.Sleep(5000);
@@ -222,33 +246,6 @@ namespace HangMan
 
             }
         }
-        public static void PlayAgain()
-        {
-            if (wrongGuess.Count == art.Length - 1)
-            {
-                Console.WriteLine("You Lost!");
-                Console.WriteLine("The answer was: " + answer);
-                Console.WriteLine();
-            ForbiddenMagic2:
-                Console.WriteLine("Want to play again? Answer: yes or no");
-                string yesorno = Console.ReadLine();
-
-                if (yesorno.ToLower() == "yes")
-                {
-                    wrongGuess = new List<char>();
-                    goto ForbiddenMagic;
-                }
-                else if (yesorno.ToLower() == "no")
-                {
-                    running = false;
-                }
-                else
-                {
-                    Console.WriteLine("Please try again!");
-                    goto ForbiddenMagic2;
-                }
-
-            }
-        }
+        
     }
 }
