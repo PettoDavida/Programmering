@@ -1,15 +1,10 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading;
 
 namespace HangMan
 {
-    class CustomWords
-    {
-        public List<string> words;
-    }
+   
 
     class Program
     {
@@ -118,6 +113,11 @@ namespace HangMan
         static void Main(string[] args)
         {
 
+
+            Console.WriteLine("");
+
+        ForbiddenMagic:
+
             wordindex = number.Next(0, Words.Count);
 
             answer = Words[wordindex];
@@ -153,7 +153,7 @@ namespace HangMan
                         Console.Write("_ ");
                     }
                 }
-
+                Console.WriteLine();
 
                 char guess = Console.ReadLine()[0];
 
@@ -180,8 +180,37 @@ namespace HangMan
 
                 }
                 HangManArt(wrongGuess.Count);
-            }
 
+
+
+                if (wrongGuess.Count == art.Length - 1)
+                {
+                    Console.WriteLine("You Lost!");
+                    Console.WriteLine("The answer was: " + answer);
+                    Console.WriteLine();
+                ForbiddenMagic2:
+                    Console.WriteLine("Want to play again? Answer: yes or no");
+                    string yesorno = Console.ReadLine();
+
+                    if (yesorno.ToLower() == "yes")
+                    {
+                        wrongGuess = new List<char>();
+                        goto ForbiddenMagic;
+                    }
+                    else if (yesorno.ToLower() == "no")
+                    {
+                        running = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please try again!");
+                        goto ForbiddenMagic2;
+                    }
+
+                }
+            }
+                Console.WriteLine("Program stops in 5 seconds");
+                Thread.Sleep(5000);
             
         }
         public static void HangManArt(int j)
@@ -192,12 +221,10 @@ namespace HangMan
             }
 
         }
-       
-       
-
-           
-
+        public static void Game()
+        {
 
             }
-        }
-    
+        
+    }
+}
