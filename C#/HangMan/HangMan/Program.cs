@@ -1,9 +1,15 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading;
 
 namespace HangMan
 {
+    class CustomWords
+    {
+        public List<string> words;
+    }
 
     class Program
     {
@@ -111,6 +117,12 @@ namespace HangMan
 
         static void Main(string[] args)
         {
+            if (File.Exists("words.json"))
+            {
+                string fileContent = File.ReadAllText("words.json");
+                CustomWords newWords = JsonConvert.DeserializeObject<CustomWords>(fileContent);
+                Words = newWords.words;
+            }
 
             Console.WriteLine("");
 
@@ -154,7 +166,9 @@ namespace HangMan
             }
 
         }
-
+        /// <summary>
+        /// wordindex = skapar ett tal som är mellan 0 och så många ord som finns i arrayen med orden man ska gissa.
+        /// </summary>
         public static void Game()
         {
 
