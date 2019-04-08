@@ -110,6 +110,7 @@ namespace HangMan
         static string PlayorAdd = "";
 
         static string answer;
+        static string YoN;
 
         static char[] word;
         static List<char> correctGuess = new List<char>();
@@ -134,11 +135,34 @@ namespace HangMan
 
             if (PlayorAdd.ToLower() == "play")
             {
-                goto ForbiddenMagic
+                goto ForbiddenMagic;
             }
             else if(PlayorAdd.ToLower() == "add")
             {
-                
+                ForbiddenMagic6:
+                Console.WriteLine("Write what word you want to add:");
+                string newWord = Console.ReadLine();
+                Words.Add(newWord);
+                CustomWords newWords = new CustomWords();
+                newWords.words = Words;
+                String insertedword = JsonConvert.SerializeObject(newWords);
+                File.WriteAllText("words.json", insertedword);
+                Console.WriteLine("Do you want to add another word?");
+                ForbiddenMagic5:
+                Console.WriteLine("yes or no");
+                YoN = Console.ReadLine();
+                if ( YoN.ToLower() == "yes")
+                {
+                    goto ForbiddenMagic6;
+                }else if (YoN.ToLower() == "no")
+                {
+                    
+                }
+                else
+                {
+                    Console.WriteLine("Try Again!");
+                    goto ForbiddenMagic5;
+                }
             }
             else
             {
