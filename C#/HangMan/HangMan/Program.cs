@@ -107,6 +107,7 @@ namespace HangMan
 
         static Random number = new Random();
         static int wordindex;
+        static string PlayorAdd = "";
 
         static string answer;
 
@@ -124,7 +125,28 @@ namespace HangMan
                 Words = newWords.words;
             }
 
-            Console.WriteLine("");
+            Console.WriteLine("Do you want to play or add custom words?");
+            Console.WriteLine("It is recommended to add words if it is your first time!");
+            ForbiddenMagic4:
+            Console.WriteLine("If you want to add words write (add)");
+            Console.WriteLine("If you want to play write (play)");
+            PlayorAdd = Console.ReadLine();
+
+            if (PlayorAdd.ToLower() == "play")
+            {
+                goto ForbiddenMagic
+            }
+            else if(PlayorAdd.ToLower() == "add")
+            {
+                
+            }
+            else
+            {
+                Console.WriteLine("Please try again!");
+                goto ForbiddenMagic4;
+            }
+
+
 
         ForbiddenMagic:
             Game();
