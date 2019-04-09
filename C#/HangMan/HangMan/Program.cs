@@ -113,6 +113,7 @@ namespace HangMan
         static string YoN;
 
         static char[] word;
+        static List<char> correctAnswer = new List<char>();
         static List<char> correctGuess = new List<char>();
         static List<char> wrongGuess = new List<char>();
         static bool running;
@@ -129,7 +130,7 @@ namespace HangMan
 
             Console.WriteLine("Do you want to play or add custom words?");
             Console.WriteLine("It is recommended to add words if it is your first time!");
-            Thread.Sleep(3000);
+            Thread.Sleep(1500);
             Console.Clear();
 ForbiddenMagic4:
             Console.WriteLine("If you want to add words write (add)");
@@ -193,6 +194,7 @@ ForbiddenMagic2:
 
                 if (yesorno.ToLower() == "yes")
                 {
+                    correctGuess = new List<char>();
                     wrongGuess = new List<char>();
                     goto ForbiddenMagic;
                 }
@@ -220,6 +222,7 @@ ForbiddenMagic8:
 
                 if (yesorno.ToLower() == "yes")
                 {
+                    correctGuess = new List<char>();
                     wrongGuess = new List<char>();
                     goto ForbiddenMagic;
                 }
@@ -259,10 +262,17 @@ ForbiddenMagic8:
             answer = Words[wordindex];
 
             word = answer.ToCharArray();
+            //correctAnswer = new List<char>(word);
 
             running = true;
 
             Console.WriteLine(answer);
+
+            char[] correctAnswer = new char[answer.Length];
+            for (int i = 0; i < correctAnswer.Length; i++)
+            {
+                correctAnswer[i] = '_';
+            }
 
             while (running)
             {
@@ -278,16 +288,9 @@ ForbiddenMagic8:
                 }
                 Console.WriteLine(" ");
                 Console.WriteLine();
-                for (int i = 0; i < word.Length; i++)
+                for (int i = 0; i < correctAnswer.Length; i++)
                 {
-                    if (correctGuess.Contains(word[i]))
-                    {
-                        Console.Write(word[i] + " ");
-                    }
-                    else
-                    {
-                        Console.Write("_ ");
-                    }
+                    Console.Write(correctAnswer[i] + " ");
                 }
                 Console.WriteLine();
 
@@ -313,9 +316,9 @@ ForbiddenMagic8:
                 bool added = false;
                 for (int i = 0; i < word.Length; i++)
                 {
-                    
                     if (word[i] == guess[0])
                     {
+                        correctAnswer[i] = word[i];
                         if (!correctGuess.Contains(guess[0]))
                         {
                             correctGuess.Add(word[i]);
@@ -331,6 +334,16 @@ ForbiddenMagic8:
                         wrongGuess.Add(guess[0]);
 
                 }
+
+                string word2 = new string(correctAnswer);
+
+                if (answer == word2)
+                {
+                    Console.WriteLine("You got it right!");
+                    running = false;
+                    won = true;
+                }
+                
 Forbiddenmagic3:
                 HangManArt(wrongGuess.Count);
             
