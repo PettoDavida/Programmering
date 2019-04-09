@@ -131,8 +131,9 @@ namespace HangMan
             Console.WriteLine("Do you want to play or add custom words?");
             Console.WriteLine("You can also choose your own word if you want to play with a friend!");
             Console.WriteLine("It is recommended to add words if it is your first time!");
-            Thread.Sleep(1500);
+            Thread.Sleep(3000);
             Console.Clear();
+ForbiddenMagic:
 ForbiddenMagic4:
             Console.WriteLine("If you want to add words write (add)");
             Console.WriteLine("If you want to play write (play)");
@@ -145,7 +146,7 @@ ForbiddenMagic4:
             }
             else if (PlayorAdd.ToLower() == "add")
             {
-ForbiddenMagic6:
+            ForbiddenMagic6:
                 Console.WriteLine("Write what word you want to add:");
                 string newWord = Console.ReadLine();
                 Console.Clear();
@@ -155,7 +156,7 @@ ForbiddenMagic6:
                 String insertedword = JsonConvert.SerializeObject(newWords);
                 File.WriteAllText("words.json", insertedword);
                 Console.WriteLine("Do you want to add another word?");
-ForbiddenMagic5:
+            ForbiddenMagic5:
                 Console.WriteLine("yes or no");
                 YoN = Console.ReadLine();
                 Console.Clear();
@@ -178,14 +179,13 @@ ForbiddenMagic5:
                 goto ForbiddenMagic10;
             }
             else
-                    {
+            {
                 Console.WriteLine("Please try again!");
                 goto ForbiddenMagic4;
             }
 
 
 
-ForbiddenMagic:
             Game();
 ForbiddenMagic10:
             OwnGame();
@@ -221,9 +221,9 @@ ForbiddenMagic2:
             }
             if (won)
             {
-                
+
                 Console.WriteLine("Want to play again? Answer: yes or no");
-ForbiddenMagic8:
+            ForbiddenMagic8:
                 string yesorno = Console.ReadLine();
                 Console.Clear();
 
@@ -350,19 +350,18 @@ ForbiddenMagic8:
                     running = false;
                     won = true;
                 }
-                
-Forbiddenmagic3:
+
+            Forbiddenmagic3:
                 HangManArt(wrongGuess.Count);
-            
+
 
 
             }
         }
         public static void OwnGame()
         {
-            wordindex = number.Next(0, Words.Count);
-
-            answer = Words[wordindex];
+            Console.WriteLine("Write what word you want your friend/friends to guess.");
+            answer = Console.ReadLine();
 
             word = answer.ToCharArray();
 
@@ -450,5 +449,6 @@ Forbiddenmagic3:
                 HangManArt(wrongGuess.Count);
             }
 
+        }
     }
 }
