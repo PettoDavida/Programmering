@@ -116,6 +116,7 @@ namespace HangMan
         static List<char> correctGuess = new List<char>();
         static List<char> wrongGuess = new List<char>();
         static bool running;
+        static bool won = false;
 
         static void Main(string[] args)
         {
@@ -128,35 +129,40 @@ namespace HangMan
 
             Console.WriteLine("Do you want to play or add custom words?");
             Console.WriteLine("It is recommended to add words if it is your first time!");
-            ForbiddenMagic4:
+            Thread.Sleep(3000);
+            Console.Clear();
+ForbiddenMagic4:
             Console.WriteLine("If you want to add words write (add)");
             Console.WriteLine("If you want to play write (play)");
             PlayorAdd = Console.ReadLine();
-
+            Console.Clear();
             if (PlayorAdd.ToLower() == "play")
             {
                 goto ForbiddenMagic;
             }
-            else if(PlayorAdd.ToLower() == "add")
+            else if (PlayorAdd.ToLower() == "add")
             {
-                ForbiddenMagic6:
+ForbiddenMagic6:
                 Console.WriteLine("Write what word you want to add:");
                 string newWord = Console.ReadLine();
+                Console.Clear();
                 Words.Add(newWord);
                 CustomWords newWords = new CustomWords();
                 newWords.words = Words;
                 String insertedword = JsonConvert.SerializeObject(newWords);
                 File.WriteAllText("words.json", insertedword);
                 Console.WriteLine("Do you want to add another word?");
-                ForbiddenMagic5:
+ForbiddenMagic5:
                 Console.WriteLine("yes or no");
                 YoN = Console.ReadLine();
-                if ( YoN.ToLower() == "yes")
+                Console.Clear();
+                if (YoN.ToLower() == "yes")
                 {
                     goto ForbiddenMagic6;
-                }else if (YoN.ToLower() == "no")
+                }
+                else if (YoN.ToLower() == "no")
                 {
-                    
+
                 }
                 else
                 {
@@ -172,7 +178,7 @@ namespace HangMan
 
 
 
-        ForbiddenMagic:
+ForbiddenMagic:
             Game();
 
             if (wrongGuess.Count == art.Length - 1)
@@ -180,9 +186,10 @@ namespace HangMan
                 Console.WriteLine("You Lost!");
                 Console.WriteLine("The answer was: " + answer);
                 Console.WriteLine();
-            ForbiddenMagic2:
                 Console.WriteLine("Want to play again? Answer: yes or no");
+ForbiddenMagic2:
                 string yesorno = Console.ReadLine();
+                Console.Clear();
 
                 if (yesorno.ToLower() == "yes")
                 {
@@ -196,9 +203,38 @@ namespace HangMan
                 else
                 {
                     Console.WriteLine("Please try again!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                    Console.WriteLine("Play again? yes or no");
                     goto ForbiddenMagic2;
                 }
 
+            }
+            if (won)
+            {
+                
+                Console.WriteLine("Want to play again? Answer: yes or no");
+ForbiddenMagic8:
+                string yesorno = Console.ReadLine();
+                Console.Clear();
+
+                if (yesorno.ToLower() == "yes")
+                {
+                    wrongGuess = new List<char>();
+                    goto ForbiddenMagic;
+                }
+                else if (yesorno.ToLower() == "no")
+                {
+                    running = false;
+                }
+                else
+                {
+                    Console.WriteLine("Please try again!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                    Console.WriteLine("Play again? yes or no");
+                    goto ForbiddenMagic8;
+                }
             }
 
             Console.WriteLine("Program stops in 5 seconds");
@@ -255,23 +291,32 @@ namespace HangMan
                 }
                 Console.WriteLine();
 
-                char guess = ' ';
+                string guess = "";
                 try
                 {
-                    guess = Console.ReadLine()[0];
+                    guess = Console.ReadLine();
+                    Console.Clear();
+
                 }
                 catch (Exception e)
                 {
                     goto Forbiddenmagic3;
                 }
 
+                if (guess == answer)
+                {
+                    Console.WriteLine("You got it right!");
+                    running = false;
+                    won = true;
+                }
 
                 bool added = false;
                 for (int i = 0; i < word.Length; i++)
                 {
-                    if (word[i] == guess)
+                    
+                    if (word[i] == guess[0])
                     {
-                        if (!correctGuess.Contains(guess))
+                        if (!correctGuess.Contains(guess[0]))
                         {
                             correctGuess.Add(word[i]);
                             added = true;
@@ -282,16 +327,17 @@ namespace HangMan
 
                 if (!added)
                 {
-                    if (!wrongGuess.Contains(guess))
-                        wrongGuess.Add(guess);
+                    if (!wrongGuess.Contains(guess[0]))
+                        wrongGuess.Add(guess[0]);
 
                 }
-            Forbiddenmagic3:
+Forbiddenmagic3:
                 HangManArt(wrongGuess.Count);
+            
 
 
             }
         }
-        
+
     }
 }
