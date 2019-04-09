@@ -133,7 +133,6 @@ namespace HangMan
             Console.WriteLine("It is recommended to add words if it is your first time!");
             Thread.Sleep(3000);
             Console.Clear();
-ForbiddenMagic:
 ForbiddenMagic4:
             Console.WriteLine("If you want to add words write (add)");
             Console.WriteLine("If you want to play write (play)");
@@ -185,10 +184,12 @@ ForbiddenMagic4:
             }
 
 
-
+ForbiddenMagic:
             Game();
+            goto ForbiddenMagic11;
 ForbiddenMagic10:
             OwnGame();
+ForbiddenMagic11:
             if (wrongGuess.Count == art.Length - 1)
             {
                 Console.WriteLine("You Lost!");
@@ -203,7 +204,7 @@ ForbiddenMagic2:
                 {
                     correctGuess = new List<char>();
                     wrongGuess = new List<char>();
-                    goto ForbiddenMagic;
+                    goto ForbiddenMagic4;
                 }
                 else if (yesorno.ToLower() == "no")
                 {
@@ -308,7 +309,7 @@ ForbiddenMagic2:
                     Console.Clear();
 
                 }
-                catch (Exception e)
+                catch
                 {
                     goto Forbiddenmagic3;
                 }
@@ -395,16 +396,21 @@ ForbiddenMagic2:
                 }
                 Console.WriteLine();
 
-                string guess = "";
+                string guess = " ";
                 try
                 {
                     guess = Console.ReadLine();
                     Console.Clear();
 
                 }
-                catch (Exception e)
+                catch
                 {
                     goto Forbiddenmagic3;
+                }
+
+                if(guess == "")
+                {
+                    guess = " ";
                 }
 
                 if (guess == answer)
