@@ -131,65 +131,38 @@ namespace HangMan
             Console.WriteLine("Do you want to play or add custom words?");
             Console.WriteLine("You can also choose your own word if you want to play with a friend!");
             Console.WriteLine("It is recommended to add words if it is your first time!");
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
             Console.Clear();
 ForbiddenMagic4:
             Console.WriteLine("If you want to add words write (add)");
+            Console.WriteLine("If you want to delete words write (delete)");
             Console.WriteLine("If you want to play write (play)");
             Console.WriteLine("If you want to choose your own word write(own)");
             PlayorAdd = Console.ReadLine();
             Console.Clear();
             if (PlayorAdd.ToLower() == "play")
             {
-                goto ForbiddenMagic;
+                Game();
             }
             else if (PlayorAdd.ToLower() == "add")
             {
-            ForbiddenMagic6:
-                Console.WriteLine("Write what word you want to add:");
-                string newWord = Console.ReadLine();
-                Console.Clear();
-                Words.Add(newWord);
-                CustomWords newWords = new CustomWords();
-                newWords.words = Words;
-                String insertedword = JsonConvert.SerializeObject(newWords);
-                File.WriteAllText("words.json", insertedword);
-                Console.WriteLine("Do you want to add another word?");
-            ForbiddenMagic5:
-                Console.WriteLine("yes or no");
-                YoN = Console.ReadLine();
-                Console.Clear();
-                if (YoN.ToLower() == "yes")
-                {
-                    goto ForbiddenMagic6;
-                }
-                else if (YoN.ToLower() == "no")
-                {
-
-                }
-                else
-                {
-                    Console.WriteLine("Try Again!");
-                    goto ForbiddenMagic5;
-                }
+                Add();
+            }
+            else if (PlayorAdd.ToLower() == "delete")
+            {
+                Delete();
             }
             else if (PlayorAdd.ToLower() == "own")
             {
-                goto ForbiddenMagic10;
+                OwnGame();
+                
             }
             else
             {
                 Console.WriteLine("Please try again!");
                 goto ForbiddenMagic4;
             }
-
-
-ForbiddenMagic:
-            Game();
-            goto ForbiddenMagic11;
-ForbiddenMagic10:
-            OwnGame();
-ForbiddenMagic11:
+             
             if (wrongGuess.Count == art.Length - 1)
             {
                 Console.WriteLine("You Lost!");
@@ -220,32 +193,17 @@ ForbiddenMagic2:
                 }
 
             }
+PlayGame:
+
             if (won)
             {
 
-                Console.WriteLine("Want to play again? Answer: yes or no");
-            ForbiddenMagic8:
-                string yesorno = Console.ReadLine();
-                Console.Clear();
+                PlayAgain();
+            }
+            if (won)
+            {
+                goto PlayGame;
 
-                if (yesorno.ToLower() == "yes")
-                {
-                    correctGuess = new List<char>();
-                    wrongGuess = new List<char>();
-                    goto ForbiddenMagic;
-                }
-                else if (yesorno.ToLower() == "no")
-                {
-                    running = false;
-                }
-                else
-                {
-                    Console.WriteLine("Please try again!");
-                    Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.WriteLine("Play again? yes or no");
-                    goto ForbiddenMagic8;
-                }
             }
 
             Console.WriteLine("Program stops in 5 seconds");
@@ -259,18 +217,16 @@ ForbiddenMagic2:
             }
 
         }
-        /// <summary>
-        /// wordindex = skapar ett tal som är mellan 0 och så många ord som finns i arrayen med orden man ska gissa.
-        /// </summary>
         public static void Game()
         {
-
+            /// <summary>
+            /// wordindex = skapar ett tal som är mellan 0 och så många ord som finns i arrayen med orden man ska gissa.
+            /// </summary>
             wordindex = number.Next(0, Words.Count);
 
             answer = Words[wordindex];
 
             word = answer.ToCharArray();
-            //correctAnswer = new List<char>(word);
 
             running = true;
 
@@ -309,10 +265,13 @@ ForbiddenMagic2:
                     Console.Clear();
 
                 }
-                catch
+                catch{ }
+
+                if (guess == "")
                 {
                     goto Forbiddenmagic3;
                 }
+
 
                 if (guess == answer)
                 {
@@ -352,7 +311,7 @@ ForbiddenMagic2:
                     won = true;
                 }
 
-            Forbiddenmagic3:
+Forbiddenmagic3:
                 HangManArt(wrongGuess.Count);
 
 
@@ -405,12 +364,11 @@ ForbiddenMagic2:
                 }
                 catch
                 {
-                    goto Forbiddenmagic3;
                 }
 
-                if(guess == "")
+                if (guess =="")
                 {
-                    guess = " ";
+                    goto Forbiddenmagic3;
                 }
 
                 if (guess == answer)
@@ -451,10 +409,98 @@ ForbiddenMagic2:
                     won = true;
                 }
 
-            Forbiddenmagic3:
+Forbiddenmagic3:
                 HangManArt(wrongGuess.Count);
             }
 
+        }
+        public static void Delete()
+        {
+        ForbiddenMagic12:
+            Console.WriteLine("Write what word you want to delete:");
+            string newWord = Console.ReadLine();
+            Console.Clear();
+            Words.Add(newWord);
+            CustomWords newWords = new CustomWords();
+            newWords.words = Words;
+            String insertedword = JsonConvert.SerializeObject(newWords);
+            File.WriteAllText("words.json", insertedword);
+            Console.WriteLine("Do you want to add another word?");
+        ForbiddenMagic13:
+            Console.WriteLine("yes or no");
+            YoN = Console.ReadLine();
+            Console.Clear();
+            if (YoN.ToLower() == "yes")
+            {
+                goto ForbiddenMagic12;
+            }
+            else if (YoN.ToLower() == "no")
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("Try Again!");
+                goto ForbiddenMagic13;
+            }
+        }
+        public static void Add()
+        {
+        ForbiddenMagic6:
+            Console.WriteLine("Write what word you want to add:");
+            string newWord = Console.ReadLine();
+            Console.Clear();
+            Words.Add(newWord);
+            CustomWords newWords = new CustomWords();
+            newWords.words = Words;
+            String insertedword = JsonConvert.SerializeObject(newWords);
+            File.WriteAllText("words.json", insertedword);
+            Console.WriteLine("Do you want to add another word?");
+        ForbiddenMagic5:
+            Console.WriteLine("yes or no");
+            YoN = Console.ReadLine();
+            Console.Clear();
+            if (YoN.ToLower() == "yes")
+            {
+                goto ForbiddenMagic6;
+            }
+            else if (YoN.ToLower() == "no")
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("Try Again!");
+                goto ForbiddenMagic5;
+            }
+        }
+        public static void PlayAgain()
+        {
+            Console.WriteLine("Want to play again? Answer: yes or no");
+        FaultyAnswer:
+            string yesorno = Console.ReadLine();
+            Console.Clear();
+
+            if (yesorno.ToLower() == "yes")
+            {
+
+                correctGuess = new List<char>();
+                wrongGuess = new List<char>();
+                Game();
+            }
+            else if (yesorno.ToLower() == "no")
+            {
+                running = false;
+                won = false;
+            }
+            else
+            {
+                Console.WriteLine("Please try again!");
+                Thread.Sleep(1000);
+                Console.Clear();
+                Console.WriteLine("Play again? yes or no");
+                goto FaultyAnswer;
+            }
         }
     }
 }
