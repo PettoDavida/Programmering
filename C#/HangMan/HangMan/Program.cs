@@ -133,7 +133,7 @@ namespace HangMan
             Console.WriteLine("It is recommended to add words if it is your first time!");
             Thread.Sleep(2000);
             Console.Clear();
-ForbiddenMagic4:
+Start:
             Console.WriteLine("If you want to add words write (add)");
             Console.WriteLine("If you want to delete words write (delete)");
             Console.WriteLine("If you want to play write (play)");
@@ -160,38 +160,16 @@ ForbiddenMagic4:
             else
             {
                 Console.WriteLine("Please try again!");
-                goto ForbiddenMagic4;
+                goto Start;
             }
-             
+
             if (wrongGuess.Count == art.Length - 1)
             {
-                Console.WriteLine("You Lost!");
-                Console.WriteLine("The answer was: " + answer);
-                Console.WriteLine();
-                Console.WriteLine("Want to play again? Answer: yes or no");
-ForbiddenMagic2:
-                string yesorno = Console.ReadLine();
-                Console.Clear();
-
-                if (yesorno.ToLower() == "yes")
+                Lost();
+                if (running)
                 {
-                    correctGuess = new List<char>();
-                    wrongGuess = new List<char>();
-                    goto ForbiddenMagic4;
-                }
-                else if (yesorno.ToLower() == "no")
-                {
-                    running = false;
-                }
-                else
-                {
-                    Console.WriteLine("Please try again!");
-                    Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.WriteLine("Play again? yes or no");
-                    goto ForbiddenMagic2;
-                }
-
+                    //NOTE: Fixa så att den fortsätter att köra och att man ska kunna välja vilket mode man vill köra
+                }      
             }
 PlayGame:
 
@@ -492,6 +470,36 @@ Forbiddenmagic3:
             {
                 running = false;
                 won = false;
+            }
+            else
+            {
+                Console.WriteLine("Please try again!");
+                Thread.Sleep(1000);
+                Console.Clear();
+                Console.WriteLine("Play again? yes or no");
+                goto FaultyAnswer;
+            }
+        }
+        public static void Lost()
+        {
+            Console.WriteLine("You Lost!");
+            Console.WriteLine("The answer was: " + answer);
+            Console.WriteLine();
+            Console.WriteLine("Want to play again? Answer: yes or no");
+        FaultyAnswer:
+            string yesorno = Console.ReadLine();
+            Console.Clear();
+
+            if (yesorno.ToLower() == "yes")
+            {
+                correctGuess = new List<char>();
+                wrongGuess = new List<char>();
+                running = true;
+            }
+            else if (yesorno.ToLower() == "no")
+            {
+                running = false;
+
             }
             else
             {
