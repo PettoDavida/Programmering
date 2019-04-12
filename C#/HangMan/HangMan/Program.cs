@@ -200,8 +200,8 @@ PlayGame:
 
             }
 
-            Console.WriteLine("Program stops in 5 seconds");
-            Thread.Sleep(5000);
+            Console.WriteLine("Program Stopping...");
+            Thread.Sleep(1500);
         }
         public static void HangManArt(int j)
         {
