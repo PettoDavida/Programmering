@@ -118,6 +118,8 @@ namespace HangMan
         static List<char> wrongGuess = new List<char>();
         static bool running;
         static bool won = false;
+        static bool Play;
+
 
         static void Main(string[] args)
         {
@@ -149,12 +151,19 @@ Start:
             else if (PlayorAdd.ToLower() == "add")
             {
                 Add();
-                goto Start;
+                if (Play)
+                {
+                    goto Start;
+
+                }
             }
             else if (PlayorAdd.ToLower() == "delete")
             {
                 Delete();
-                goto Start;
+                if (Play)
+                {
+                    goto Start;
+                }
             }
             else if (PlayorAdd.ToLower() == "own")
             {
@@ -452,7 +461,22 @@ Forbiddenmagic3:
             }
             else if (YoN.ToLower() == "no")
             {
-
+                Console.WriteLine("Do you want to play or not?");
+incorrectAnswer:
+                Console.WriteLine("Yes or no");
+                YoN = Console.ReadLine();
+                if (YoN.ToLower() == "yes")
+                {
+                    Play = true;
+                }
+                else if (YoN.ToLower() == "no")
+                {
+                    Play = false;
+                }
+                else
+                {
+                    goto incorrectAnswer;
+                }
             }
             else
             {
