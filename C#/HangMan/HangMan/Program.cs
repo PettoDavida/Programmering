@@ -168,7 +168,7 @@ Start:
                 Lost();
                 if (running)
                 {
-                    //NOTE: Fixa så att den fortsätter att köra och att man ska kunna välja vilket mode man vill köra
+                    goto Start;
                 }      
             }
 PlayGame:
