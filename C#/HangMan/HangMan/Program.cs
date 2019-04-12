@@ -118,7 +118,7 @@ namespace HangMan
         static List<char> wrongGuess = new List<char>();
         static bool running;
         static bool won = false;
-        static bool Play;
+        static bool Play = false;
 
 
         static void Main(string[] args)
@@ -129,6 +129,7 @@ namespace HangMan
                 CustomWords newWords = JsonConvert.DeserializeObject<CustomWords>(fileContent);
                 Words = newWords.words;
             }
+
 
             Console.WriteLine("Do you want to play or add custom words?");
             Console.WriteLine("You can also choose your own word if you want to play with a friend!");
@@ -188,7 +189,6 @@ Start:
                 }      
             }
 PlayGame:
-
             if (won)
             {
 
@@ -412,10 +412,11 @@ Forbiddenmagic3:
         {
         DelAgain:
             Console.WriteLine("Write what word you want to delete:");
-            Console.WriteLine();
+            string existing = File.ReadAllText("words.json");
+            Console.WriteLine(existing);
             string newWord = Console.ReadLine();
             Console.Clear();
-            Words.Remove(newWord);
+            Words.Remove(newWord.ToLower());
             CustomWords newWords = new CustomWords();
             newWords.words = Words;
             String insertedword = JsonConvert.SerializeObject(newWords);
@@ -431,7 +432,23 @@ Forbiddenmagic3:
             }
             else if (YoN.ToLower() == "no")
             {
-
+                Console.WriteLine("Do you want to play or not?");
+            incorrectAnswer:
+                Console.WriteLine("Yes or no");
+                YoN = Console.ReadLine();
+                if (YoN.ToLower() == "yes")
+                {
+                    Play = true;
+                }
+                else if (YoN.ToLower() == "no")
+                {
+                    Play = false;
+                    Console.Clear();
+                }
+                else
+                {
+                    goto incorrectAnswer;
+                }
             }
             else
             {
@@ -443,9 +460,11 @@ Forbiddenmagic3:
         {
         AddAgain:
             Console.WriteLine("Write what word you want to add:");
+            string existing = File.ReadAllText("words.json");
+            Console.WriteLine(existing);
             string newWord = Console.ReadLine();
             Console.Clear();
-            Words.Add(newWord);
+            Words.Add(newWord.ToLower());
             CustomWords newWords = new CustomWords();
             newWords.words = Words;
             String insertedword = JsonConvert.SerializeObject(newWords);
@@ -472,6 +491,7 @@ incorrectAnswer:
                 else if (YoN.ToLower() == "no")
                 {
                     Play = false;
+                    Console.Clear();
                 }
                 else
                 {
