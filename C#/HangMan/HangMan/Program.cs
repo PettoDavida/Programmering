@@ -138,6 +138,8 @@ Start:
             Console.WriteLine("If you want to delete words write (delete)");
             Console.WriteLine("If you want to play write (play)");
             Console.WriteLine("If you want to choose your own word write(own)");
+            Console.WriteLine("If you want to choose stop write (stop)");
+
             PlayorAdd = Console.ReadLine();
             Console.Clear();
             if (PlayorAdd.ToLower() == "play")
@@ -147,15 +149,20 @@ Start:
             else if (PlayorAdd.ToLower() == "add")
             {
                 Add();
+                goto Start;
             }
             else if (PlayorAdd.ToLower() == "delete")
             {
                 Delete();
+                goto Start;
             }
             else if (PlayorAdd.ToLower() == "own")
             {
-                OwnGame();
-                
+                OwnGame();   
+            }
+            else if (PlayorAdd.ToLower() == "stop")
+            {
+
             }
             else
             {
@@ -394,23 +401,24 @@ Forbiddenmagic3:
         }
         public static void Delete()
         {
-        ForbiddenMagic12:
+        DelAgain:
             Console.WriteLine("Write what word you want to delete:");
+            Console.WriteLine();
             string newWord = Console.ReadLine();
             Console.Clear();
-            Words.Add(newWord);
+            Words.Remove(newWord);
             CustomWords newWords = new CustomWords();
             newWords.words = Words;
             String insertedword = JsonConvert.SerializeObject(newWords);
             File.WriteAllText("words.json", insertedword);
-            Console.WriteLine("Do you want to add another word?");
-        ForbiddenMagic13:
+            Console.WriteLine("Do you want to delete another word?");
+        FaultyAnswer:
             Console.WriteLine("yes or no");
             YoN = Console.ReadLine();
             Console.Clear();
             if (YoN.ToLower() == "yes")
             {
-                goto ForbiddenMagic12;
+                goto DelAgain;
             }
             else if (YoN.ToLower() == "no")
             {
@@ -419,12 +427,12 @@ Forbiddenmagic3:
             else
             {
                 Console.WriteLine("Try Again!");
-                goto ForbiddenMagic13;
+                goto FaultyAnswer;
             }
         }
         public static void Add()
         {
-        ForbiddenMagic6:
+        AddAgain:
             Console.WriteLine("Write what word you want to add:");
             string newWord = Console.ReadLine();
             Console.Clear();
@@ -434,13 +442,13 @@ Forbiddenmagic3:
             String insertedword = JsonConvert.SerializeObject(newWords);
             File.WriteAllText("words.json", insertedword);
             Console.WriteLine("Do you want to add another word?");
-        ForbiddenMagic5:
+        FaultyAnswer:
             Console.WriteLine("yes or no");
             YoN = Console.ReadLine();
             Console.Clear();
             if (YoN.ToLower() == "yes")
             {
-                goto ForbiddenMagic6;
+                goto AddAgain;
             }
             else if (YoN.ToLower() == "no")
             {
@@ -449,7 +457,7 @@ Forbiddenmagic3:
             else
             {
                 Console.WriteLine("Try Again!");
-                goto ForbiddenMagic5;
+                goto FaultyAnswer;
             }
         }
         public static void PlayAgain()
