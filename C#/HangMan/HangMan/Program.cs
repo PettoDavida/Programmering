@@ -13,7 +13,6 @@ namespace HangMan
 
     class Program
     {
-
         static string[] art = {
 @"
 
@@ -29,7 +28,6 @@ namespace HangMan
 
 
 =========",
-
 @"      +
       |
       |
@@ -37,7 +35,6 @@ namespace HangMan
       |
       |
 =========",
-
 @"  +---+
       |
       |
@@ -45,7 +42,6 @@ namespace HangMan
       |
       |
 =========",
-
 @"  +---+
   |   |
       |
@@ -53,7 +49,6 @@ namespace HangMan
       |
       |
 =========",
-
 @"  +---+
   |   |
   O   |
@@ -61,7 +56,6 @@ namespace HangMan
       |
       |
 =========",
-
 @"  +---+
   |   |
   O   |
@@ -69,7 +63,6 @@ namespace HangMan
       |
       |
 =========",
-
 @"  +---+
   |   |
   O   |
@@ -77,7 +70,6 @@ namespace HangMan
       |
       |
 =========",
-
 @"  +---+
   |   |
   O   |
@@ -85,7 +77,6 @@ namespace HangMan
       |
       |
 =========",
-
 @"  +---+
   |   |
   O   |
@@ -93,7 +84,6 @@ namespace HangMan
  /    |
       |
 =========",
-
 @"  +---+
   |   |
   O   |
@@ -103,87 +93,105 @@ namespace HangMan
 ========="
 
 };
+        // ^Detta är min egna tabell för hangman målningen
+
         static List<string> Words = new List<string> { "jesus", "owl", "peasant", "cupboard", "pizza", "buttplug", "farmer", };
+        // ^Detta är en redan gjord lista av ord ifall om att man inte har "word.json" filen så man fortfarande kan spela spelet men man kan inte ta bort eller lägga till ord i denna lista
 
         static Random number = new Random();
+        // ^En random variabel som jag använder för att kunna randomisera vilket ord man får när man kör själv
+
         static int wordindex;
-        static string PlayorAdd = "";
+        // ^Denna int används för att välja vilket ord som ska användas när man spelar själv
+
+        static string PlayorAdd;
+        // ^Detta är variabeln som används i början när man får välja om man vill spela eller ta bort/lägga till ord.
 
         static string answer;
+        // ^Ditt svar när man ska gissa på ordet Detta är en string så att man ska kunna gissa hela ordet
+
         static string YoN;
+        // ^Denna används för frågor där det enda svaret är yes or no
 
         static char[] word;
-        static List<char> correctAnswer = new List<char>();
+        // ^Ordet man ska hitta
+
         static List<char> correctGuess = new List<char>();
+        // ^Detta är en list som används för att hålla koll på vilka bokstäver som gissats och varit rätt
+
         static List<char> wrongGuess = new List<char>();
-        static bool running;
-        static bool won = false;
-        static bool Play = false;
+        // ^Detta är en list som används för att hålla koll på vilka bokstäver som gissats och varit fel men även hur många så att programmet skriver ut art Stringen
+
+        static bool running; //Används medans spelet är igång 
+        static bool won = false; //Denna blir true varje gång man vinner och då kan man välja om man vill spela igen eller inte och detta ändrar den till false om man vill köra igen annars så är den fortfarande true
+        static bool Play = false; // När man har lagt till eller tagit bort ett ord så får man välja om man vill spela eller bara sluta spelet och då blir denna true om man vill spela igen så att den går tillbaka till början och ger en val hur man vill spela
+        // ^3 boolean som jag använder för olika saker när jag vill få programmet att göra saker beroende på vad som hänt innan
 
 
         static void Main(string[] args)
         {
-            if (File.Exists("words.json"))
-            {
-                string fileContent = File.ReadAllText("words.json");
-                CustomWords newWords = JsonConvert.DeserializeObject<CustomWords>(fileContent);
-                Words = newWords.words;
-            }
 
+            // Startar metoden
+            CheckFile();
 
+            // Skriver i konsolen 
             Console.WriteLine("Do you want to play or add custom words?");
             Console.WriteLine("You can also choose your own word if you want to play with a friend!");
             Console.WriteLine("It is recommended to add words if it is your first time!");
-            Thread.Sleep(2000);
+            Thread.Sleep(2000); // Den pausar programmet i 2 sekunder innan den clearar konsolen
             Console.Clear();
-Start:
+
+Start: // En label som programmet kommer hoppa till med en goto
+
+            // Skriver i konsolen 
             Console.WriteLine("If you want to add words write (add)");
             Console.WriteLine("If you want to delete words write (delete)");
             Console.WriteLine("If you want to play write (play)");
             Console.WriteLine("If you want to choose your own word write(own)");
             Console.WriteLine("If you want to choose stop write (stop)");
 
+            // tar in en string och sätter PlayorAdd value till den strängen
             PlayorAdd = Console.ReadLine();
             Console.Clear();
-            if (PlayorAdd.ToLower() == "play")
+            if (PlayorAdd.ToLower() == "play") // om PlayorAdd = play: starta metoden Game
             {
                 Game();
             }
-            else if (PlayorAdd.ToLower() == "add")
+            else if (PlayorAdd.ToLower() == "add")// om PlayorAdd = add: starta metoden Add
             {
                 Add();
-                if (Play)
+                if (Play) // om man har valt att spela igen i Add metoden så blir Play true och man går til labeln Start
                 {
                     goto Start;
 
                 }
             }
-            else if (PlayorAdd.ToLower() == "delete")
+            else if (PlayorAdd.ToLower() == "delete")// om PlayorAdd = delete: starta metoden Delete
             {
                 Delete();
-                if (Play)
+                if (Play) // om man har valt att spela igen i Delete metoden så blir Play true och man går til labeln Start
                 {
                     goto Start;
                 }
             }
-            else if (PlayorAdd.ToLower() == "own")
+            else if (PlayorAdd.ToLower() == "own")// om PlayorAdd = own: starta metoden OwnGame
             {
                 OwnGame();   
             }
-            else if (PlayorAdd.ToLower() == "stop")
+            else if (PlayorAdd.ToLower() == "stop")// om PlayorAdd = stop: stoppa programmet
             {
 
             }
-            else
+            else // om PlayorAdd = !play !own !delete !add !stop så ska den bara fråga igen genom att gå till labeln start igen
             {
                 Console.WriteLine("Please try again!");
                 goto Start;
             }
 
-            if (wrongGuess.Count == art.Length - 1)
+            if (wrongGuess.Count == art.Length - 1) // I metoden Game och OwnGame så stoppar den metoden när man har gissat för många gånger och då start den Lost metoden
             {
                 Lost();
-                if (running)
+                if (Play)// I Lost så frågar den om man vill spela igen och om man villa så går den till start igen där man kan välja om man vill spela eller ta bort/lägga till ord
                 {
                     goto Start;
                 }      
@@ -200,7 +208,7 @@ PlayGame:
 
             }
 
-            Console.WriteLine("Program Stopping...");
+            Console.WriteLine("Program Stopping..."); // visar att programmet stoppar och väntar i 1,5 sek så man ska hinna se
             Thread.Sleep(1500);
         }
         public static void HangManArt(int j)
@@ -432,7 +440,7 @@ Forbiddenmagic3:
             }
             else if (YoN.ToLower() == "no")
             {
-                Console.WriteLine("Do you want to play or not?");
+                Console.WriteLine("Do you want to play?");
             incorrectAnswer:
                 Console.WriteLine("Yes or no");
                 YoN = Console.ReadLine();
@@ -480,7 +488,7 @@ Forbiddenmagic3:
             }
             else if (YoN.ToLower() == "no")
             {
-                Console.WriteLine("Do you want to play or not?");
+                Console.WriteLine("Do you want to play?");
 incorrectAnswer:
                 Console.WriteLine("Yes or no");
                 YoN = Console.ReadLine();
@@ -508,17 +516,17 @@ incorrectAnswer:
         {
             Console.WriteLine("Want to play again? Answer: yes or no");
         FaultyAnswer:
-            string yesorno = Console.ReadLine();
+            YoN = Console.ReadLine();
             Console.Clear();
 
-            if (yesorno.ToLower() == "yes")
+            if (YoN.ToLower() == "yes")
             {
 
                 correctGuess = new List<char>();
                 wrongGuess = new List<char>();
                 Game();
             }
-            else if (yesorno.ToLower() == "no")
+            else if (YoN.ToLower() == "no")
             {
                 running = false;
                 won = false;
@@ -539,18 +547,18 @@ incorrectAnswer:
             Console.WriteLine();
             Console.WriteLine("Want to play again? Answer: yes or no");
         FaultyAnswer:
-            string yesorno = Console.ReadLine();
+            YoN = Console.ReadLine();
             Console.Clear();
 
-            if (yesorno.ToLower() == "yes")
+            if (YoN.ToLower() == "yes")
             {
                 correctGuess = new List<char>();
                 wrongGuess = new List<char>();
-                running = true;
+                Play = true;
             }
-            else if (yesorno.ToLower() == "no")
+            else if (YoN.ToLower() == "no")
             {
-                running = false;
+                Play = false;
 
             }
             else
@@ -560,6 +568,15 @@ incorrectAnswer:
                 Console.Clear();
                 Console.WriteLine("Play again? yes or no");
                 goto FaultyAnswer;
+            }
+        }
+        public static void CheckFile()
+        {
+            if (File.Exists("words.json"))
+            {
+                string fileContent = File.ReadAllText("words.json");
+                CustomWords newWords = JsonConvert.DeserializeObject<CustomWords>(fileContent);
+                Words = newWords.words;
             }
         }
     }
