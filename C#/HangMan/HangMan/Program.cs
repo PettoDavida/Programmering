@@ -187,7 +187,7 @@ Start: // En label som programmet kommer hoppa till med en goto
                 Console.WriteLine("Please try again!");
                 goto Start;
             }
-
+LostGame:
             if (wrongGuess.Count == art.Length - 1) // I metoden Game och OwnGame så stoppar den metoden när man har gissat för många gånger och då start den Lost metoden
             {
                 Lost();
@@ -196,15 +196,25 @@ Start: // En label som programmet kommer hoppa till med en goto
                     goto Start;
                 }      
             }
-PlayGame:
-            if (won)
+WonGame:
+            if (won) // efter man har vunnit i Game eller OwnGame så blir won true och man startar PlayAgain metoden där den frågar om man vill spela igen och om man vill så fortsätter won att vara true och man går tillbaka till start
             {
-
                 PlayAgain();
             }
             if (won)
             {
-                goto PlayGame;
+                won = false;
+                goto WonGame;
+
+            }
+            if (Play)
+            {
+                Game();
+                if (won)
+                {
+                    goto WonGame;
+                }
+                else { goto LostGame; }
 
             }
 
@@ -242,6 +252,7 @@ PlayGame:
 
             while (running)
             {
+Nothing:
                 if (wrongGuess.Count == art.Length - 1)
                 {
                     return;
@@ -269,9 +280,10 @@ PlayGame:
                 }
                 catch{ }
 
-                if (guess == "")
+                if (guess == " ")
                 {
-                    goto Forbiddenmagic3;
+                    Console.WriteLine("Try again!");
+                    goto Nothing;
                 }
 
 
@@ -313,7 +325,6 @@ PlayGame:
                     won = true;
                 }
 
-Forbiddenmagic3:
                 HangManArt(wrongGuess.Count);
 
 
@@ -339,6 +350,7 @@ Forbiddenmagic3:
 
             while (running)
             {
+Nothing:
                 if (wrongGuess.Count == art.Length - 1)
                 {
                     return;
@@ -356,7 +368,6 @@ Forbiddenmagic3:
                     Console.Write(correctAnswer[i] + " ");
                 }
                 Console.WriteLine();
-
                 string guess = " ";
                 try
                 {
@@ -368,9 +379,10 @@ Forbiddenmagic3:
                 {
                 }
 
-                if (guess =="")
+                if (guess == " ")
                 {
-                    goto Forbiddenmagic3;
+                    Console.WriteLine("Try again!");
+                    goto Nothing;
                 }
 
                 if (guess == answer)
@@ -411,7 +423,7 @@ Forbiddenmagic3:
                     won = true;
                 }
 
-Forbiddenmagic3:
+
                 HangManArt(wrongGuess.Count);
             }
 
@@ -524,7 +536,7 @@ incorrectAnswer:
 
                 correctGuess = new List<char>();
                 wrongGuess = new List<char>();
-                Game();
+                Play = true;
             }
             else if (YoN.ToLower() == "no")
             {
