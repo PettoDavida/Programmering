@@ -201,12 +201,7 @@ WonGame:
             {
                 PlayAgain();
             }
-            if (won)
-            {
-                won = false;
-                goto WonGame;
-
-            }
+            
             if (Play)
             {
                 Game();
@@ -542,6 +537,7 @@ incorrectAnswer:
             {
                 running = false;
                 won = false;
+                Play = false;
             }
             else
             {
