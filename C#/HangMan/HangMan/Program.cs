@@ -125,7 +125,8 @@ namespace HangMan
         static bool running; //Används medans spelet är igång 
         static bool won = false; //Denna blir true varje gång man vinner och då kan man välja om man vill spela igen eller inte och detta ändrar den till false om man vill köra igen annars så är den fortfarande true
         static bool Play = false; // När man har lagt till eller tagit bort ett ord så får man välja om man vill spela eller bara sluta spelet och då blir denna true om man vill spela igen så att den går tillbaka till början och ger en val hur man vill spela
-        // ^3 boolean som jag använder för olika saker när jag vill få programmet att göra saker beroende på vad som hänt innan
+        static bool Exists; // Används som en check för att kolla om man kan ta bort eller lägga till ord annars så skickar den tillbaka de som försöker
+        // ^4 boolean som jag använder för olika saker när jag vill få programmet att göra saker beroende på vad som hänt innan
 
 
         static void Main(string[] args)
@@ -159,20 +160,31 @@ Start: // En label som programmet kommer hoppa till med en goto
             }
             else if (PlayorAdd.ToLower() == "add")// om PlayorAdd = add: starta metoden Add
             {
-                Add();
-                if (Play) // om man har valt att spela igen i Add metoden så blir Play true och man går til labeln Start
-                {
-                    goto Start;
+                
+                    Add();
+                    if (Play) // om man har valt att spela igen i Add metoden så blir Play true och man går til labeln Start
+                    {
+                        goto Start;
 
-                }
+                    }
+                                
             }
             else if (PlayorAdd.ToLower() == "delete")// om PlayorAdd = delete: starta metoden Delete
             {
-                Delete();
-                if (Play) // om man har valt att spela igen i Delete metoden så blir Play true och man går til labeln Start
+                CheckFileV2();
+                if (Exists)
                 {
+                    Delete();
+                    if (Play) // om man har valt att spela igen i Delete metoden så blir Play true och man går til labeln Start
+                    {
+                        goto Start;
+                    }
+                }else
+                {
+                    Console.WriteLine("There seems to be a problem. The list you are trying to edit doesn't contain anything or exist");
                     goto Start;
                 }
+                
             }
             else if (PlayorAdd.ToLower() == "own")// om PlayorAdd = own: starta metoden OwnGame
             {
@@ -426,6 +438,12 @@ Nothing:
         public static void Delete()
         {
         DelAgain:
+            NoDelete();
+            if (!Exists)
+            {
+                Console.WriteLine("You can't delete your only word please add more before you delete");
+                return;
+            }
             Console.WriteLine("Write what word you want to delete:");
             string existing = File.ReadAllText("words.json");
             Console.WriteLine(existing);
@@ -474,15 +492,21 @@ Nothing:
         public static void Add()
         {
         AddAgain:
+            CustomWords oldWords = null;
+            if (File.Exists("words.json"))
+            {
+                string fileContent = File.ReadAllText("words.json");
+                oldWords = JsonConvert.DeserializeObject<CustomWords>(fileContent);
+            }
+
             Console.WriteLine("Write what word you want to add:");
             string existing = File.ReadAllText("words.json");
             Console.WriteLine(existing);
             string newWord = Console.ReadLine();
             Console.Clear();
             Words.Add(newWord.ToLower());
-            CustomWords newWords = new CustomWords();
-            newWords.words = Words;
-            String insertedword = JsonConvert.SerializeObject(newWords);
+            oldWords.words.Add(newWord);
+            String insertedword = JsonConvert.SerializeObject(oldWords);
             File.WriteAllText("words.json", insertedword);
             Console.WriteLine("Do you want to add another word?");
         FaultyAnswer:
@@ -589,6 +613,32 @@ FaultyAnswer:
                     Words = newWords.words;
                 }
                 
+            }
+        }
+        public static void CheckFileV2()
+        {
+            if (File.Exists("words.json"))
+            {
+                string fileContent = File.ReadAllText("words.json");
+                CustomWords newWords = JsonConvert.DeserializeObject<CustomWords>(fileContent);
+                if (newWords.words.Count > 0)
+                {
+                    Exists = true;
+                }
+
+            }
+        }
+        public static void NoDelete()
+        {
+            if (File.Exists("words.json"))
+            {
+                string fileContent = File.ReadAllText("words.json");
+                CustomWords newWords = JsonConvert.DeserializeObject<CustomWords>(fileContent);
+                if (newWords.words.Count <= 1)
+                {
+                    Exists = false; 
+                }
+
             }
         }
     }
