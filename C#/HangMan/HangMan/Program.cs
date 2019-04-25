@@ -230,7 +230,7 @@ WonGame:
             /// wordindex = skapar ett tal som är mellan 0 och så många ord som finns i arrayen med orden man ska gissa.
             /// </summary>
             wordindex = number.Next(0, Words.Count);
-
+            
             answer = Words[wordindex];
 
             word = answer.ToCharArray();
@@ -554,7 +554,7 @@ incorrectAnswer:
             Console.WriteLine("The answer was: " + answer);
             Console.WriteLine();
             Console.WriteLine("Want to play again? Answer: yes or no");
-        FaultyAnswer:
+FaultyAnswer:
             YoN = Console.ReadLine();
             Console.Clear();
 
@@ -584,7 +584,11 @@ incorrectAnswer:
             {
                 string fileContent = File.ReadAllText("words.json");
                 CustomWords newWords = JsonConvert.DeserializeObject<CustomWords>(fileContent);
-                Words = newWords.words;
+                if (newWords.words.Count > 0)
+                {
+                    Words = newWords.words;
+                }
+                
             }
         }
     }
