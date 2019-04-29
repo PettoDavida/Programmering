@@ -95,7 +95,7 @@ namespace HangMan
 };
         // ^Detta är min egna tabell för hangman målningen
 
-        static List<string> Words = new List<string> { "jesus", "owl", "peasant", "cupboard", "pizza", "buttplug", "farmer", };
+        static List<string> Words = new List<string> { "jesus", "owl", "peasant", "cupboard", "pizza", "farmer", };
         // ^Detta är en redan gjord lista av ord ifall om att man inte har "word.json" filen så man fortfarande kan spela spelet men man kan inte ta bort eller lägga till ord i denna lista
 
         static Random number = new Random();
@@ -140,7 +140,7 @@ namespace HangMan
             Console.WriteLine("You can also choose your own word if you want to play with a friend!");
             Console.WriteLine("It is recommended to add words if it is your first time!");
             Thread.Sleep(2000); // Den pausar programmet i 2 sekunder innan den clearar konsolen
-            Console.Clear();
+            Console.Clear();// Tar bort allt i konsolen
 
 Start: // En label som programmet kommer hoppa till med en goto
 
@@ -153,7 +153,7 @@ Start: // En label som programmet kommer hoppa till med en goto
 
             // tar in en string och sätter PlayorAdd value till den strängen
             PlayorAdd = Console.ReadLine();
-            Console.Clear();
+            Console.Clear();// Tar bort allt i konsolen
             if (PlayorAdd.ToLower() == "play") // om PlayorAdd = play: starta metoden Game
             {
                 Game();
@@ -230,7 +230,7 @@ WonGame:
         }
         public static void HangManArt(int j)
         {
-            if (j < art.Length)
+            if (j < art.Length) // Kollar så att mängden av felgissningar inte är för många så att den ska printa ut hangman arten
             {
                 Console.WriteLine(art[j]);
             }
@@ -240,6 +240,10 @@ WonGame:
         {
             /// <summary>
             /// wordindex = skapar ett tal som är mellan 0 och så många ord som finns i arrayen med orden man ska gissa.
+            /// answer = tar ut ett ord ur Words arrayen med hjälp av wordindex så att man får ett ord som man kan sen gissa.
+            /// word = är ordet man ska gissa och här så sätts det till en char array så att man kan gissa på individuella bokstäver i ordet.
+            /// running = denna är true då programmet ska köras
+            /// correctAnswer = Här så gör den en array som har längden av answer variabeln som man ska hitta
             /// </summary>
             wordindex = number.Next(0, Words.Count);
             
@@ -252,7 +256,7 @@ WonGame:
             Console.WriteLine(answer);
 
             char[] correctAnswer = new char[answer.Length];
-            for (int i = 0; i < correctAnswer.Length; i++)
+            for (int i = 0; i < correctAnswer.Length; i++) // För längden av correctAnswer så lägger den in en _ på i indexen
             {
                 correctAnswer[i] = '_';
             }
@@ -260,54 +264,57 @@ WonGame:
             while (running)
             {
 Nothing:
-                if (wrongGuess.Count == art.Length - 1)
+                if (wrongGuess.Count == art.Length - 1)// Hår så koller den så att man inte har gissat för många gånger
                 {
+
                     return;
                 }
 
                 Console.WriteLine("Guesses");
-                foreach (char c in wrongGuess)
+                foreach (char c in wrongGuess)// kollar genom wrongGuess hor printar ut de bokstäver som existerar i listan
                 {
                     Console.Write(c + " ");
                 }
                 Console.WriteLine(" ");
                 Console.WriteLine();
-                for (int i = 0; i < correctAnswer.Length; i++)
+                for (int i = 0; i < correctAnswer.Length; i++)// kollar genom correctAnswer och kollar på varje index i listan och printar ut vad som står i indexen och sätter ett space
                 {
                     Console.Write(correctAnswer[i] + " ");
                 }
                 Console.WriteLine();
-
-                string guess = "";
+                string guess = "";// skapar en string som heter guess som används för att ta in en gissning. Den är en string för att man ska kunna gissa på hela ordet
                 try
                 {
-                    guess = Console.ReadLine();
-                    Console.Clear();
+                    guess = Console.ReadLine(); // sätter värdet på guess till det man skriver in
+                    Console.Clear();// clearar konsolen
 
                 }
-                catch{ }
-
-                if (guess == " ")
+                catch{ } // om det blir en error så fångar programmet det och ignorerar det så att man kan fortsätta spela
+                if (guess == "")// catch fångar errorn så att den inte krashar när man klickar bara enter men correctAnswer[i] = word[i]; krashar programmet senare så fixade en så att den går till toppen av loopen om man skriver in bara enter
                 {
-                    Console.WriteLine("Try again!");
                     goto Nothing;
                 }
-
-
-                if (guess == answer)
+                if (guess == " ") // här så gör den så att man får försöka igen om man skriver in bara ett space
                 {
-                    Console.WriteLine("You got it right!");
-                    running = false;
-                    won = true;
+                    Console.WriteLine("Try again!");
+                    goto Nothing; // går till starten av While loopen
                 }
 
-                bool added = false;
-                for (int i = 0; i < word.Length; i++)
+
+                if (guess == answer) // Här så koller den hela ordet för att se om man gissade hela ordet rätt
                 {
-                    if (word[i] == guess[0])
+                    Console.WriteLine("You got it right!");
+                    running = false; // While loopen stoppas
+                    won = true; // won booleanen sätts till true så att man kommer in i en if sats där man kommer in i PlayAgain metoden
+                }
+
+                bool added = false; // skapar en bool som kommer användas för att kolla om bokstaven som man gissat är korrekt eller inte
+                for (int i = 0; i < word.Length; i++)// gör x många iterationer beroende på längden av ordet
+                {
+                    if (word[i] == guess[0])// kollar om bokstaven i ordet på indexen i är samma som första bokstaven av ordet man gissat eller karktären man gissat
                     {
-                        correctAnswer[i] = word[i];
-                        if (!correctGuess.Contains(guess[0]))
+                        correctAnswer[i] = word[i]; // om den är samma så sätts det in i correctAnswer på samma index som den sitter i i word arrayen så att man innan man gissar igen ser vart det ska sitta
+                        if (!correctGuess.Contains(guess[0])) // om bokstaven man gissat inte existerar i correctGuess så sätts det in och added blir true
                         {
                             correctGuess.Add(word[i]);
                             added = true;
@@ -316,23 +323,23 @@ Nothing:
 
                 }
 
-                if (!added)
+                if (!added)// om added är true så sätts inte bokstaven in i wrong Guess
                 {
                     if (!wrongGuess.Contains(guess[0]))
                         wrongGuess.Add(guess[0]);
 
                 }
 
-                string word2 = new string(correctAnswer);
+                string word2 = new string(correctAnswer);// här så konverterar den correctAnswer arrayen till en string
 
-                if (answer == word2)
+                if (answer == word2)// kollar om ordet man ska hitta är samma som det man gissat i bokstäver istället för hela ordet på en gång
                 {
                     Console.WriteLine("You got it right!");
                     running = false;
                     won = true;
                 }
 
-                HangManArt(wrongGuess.Count);
+                HangManArt(wrongGuess.Count); // Skriver ut en målning för att illustrera den klassiska hangman
 
 
 
