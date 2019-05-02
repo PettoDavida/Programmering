@@ -13,6 +13,7 @@ namespace HangMan
 
     class Program
     {
+        #region Vars
         static string[] art = {
 @"
 
@@ -126,8 +127,8 @@ namespace HangMan
         static bool won = false; //Denna blir true varje gång man vinner och då kan man välja om man vill spela igen eller inte och detta ändrar den till false om man vill köra igen annars så är den fortfarande true
         static bool Play = false; // När man har lagt till eller tagit bort ett ord så får man välja om man vill spela eller bara sluta spelet och då blir denna true om man vill spela igen så att den går tillbaka till början och ger en val hur man vill spela
         static bool Exists; // Används som en check för att kolla om man kan ta bort eller lägga till ord annars så skickar den tillbaka de som försöker
-        // ^4 boolean som jag använder för olika saker när jag vill få programmet att göra saker beroende på vad som hänt innan
-
+                            // ^4 boolean som jag använder för olika saker när jag vill få programmet att göra saker beroende på vad som hänt innan
+        #endregion
 
         static void Main(string[] args)
         {
@@ -253,8 +254,6 @@ WonGame:
 
             running = true;
 
-            Console.WriteLine(answer);
-
             char[] correctAnswer = new char[answer.Length];
             for (int i = 0; i < correctAnswer.Length; i++) // För längden av correctAnswer så lägger den in en _ på i indexen
             {
@@ -347,14 +346,14 @@ Nothing:
         }
         public static void OwnGame()
         {
+            // OwnGame är exakt likadan som Game förutom att man väljer sitt egna ord 
+
             Console.WriteLine("Write what word you want your friend/friends to guess.");
             answer = Console.ReadLine();
 
             word = answer.ToCharArray();
 
             running = true;
-
-            Console.WriteLine(answer);
 
             char[] correctAnswer = new char[answer.Length];
             for (int i = 0; i < correctAnswer.Length; i++)
