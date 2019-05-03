@@ -229,6 +229,7 @@ WonGame:
             Console.WriteLine("Program Stopping..."); // visar att programmet stoppar och väntar i 1,5 sek så man ska hinna se
             Thread.Sleep(1500);
         }
+        #region Methods
         public static void HangManArt(int j)
         {
             if (j < art.Length) // Kollar så att mängden av felgissningar inte är för många så att den ska printa ut hangman arten
@@ -444,52 +445,60 @@ Nothing:
         public static void Delete()
         {
         DelAgain:
-            NoDelete();
+            NoDelete();// går in i metoden som kollar om listan i .json filen har ett ord eller mindre annars och då kan man inte ta bort ord innan man lagt till mer
             if (!Exists)
             {
                 Console.WriteLine("You can't delete your only word please add more before you delete");
                 return;
             }
+            #region Remove
             Console.WriteLine("Write what word you want to delete:");
+            // 1
             string existing = File.ReadAllText("words.json");
             Console.WriteLine(existing);
             string newWord = Console.ReadLine();
             Console.Clear();
+            // 1
+            // från 1 till 1 så printar den hela listan av ord och tar in en variabel
+            // 2
             Words.Remove(newWord.ToLower());
             CustomWords newWords = new CustomWords();
             newWords.words = Words;
             String insertedword = JsonConvert.SerializeObject(newWords);
             File.WriteAllText("words.json", insertedword);
+            // 2
+            // från 2 till 2 så tar den variabeln den fått av spelaren och om det är ett ord som inte existerar i listan ändras inget.
             Console.WriteLine("Do you want to delete another word?");
-        FaultyAnswer:
+FaultyAnswer:
             Console.WriteLine("yes or no");
-            YoN = Console.ReadLine();
+            YoN = Console.ReadLine(); //läser in variabel 
             Console.Clear();
+            #endregion
             if (YoN.ToLower() == "yes")
             {
-                goto DelAgain;
+                goto DelAgain; // om man vill ta bort ett till ord så går den till toppen av metoden där den kollar om man kan ta bort ett ord eller inte i metoden DelAgain
             }
-            else if (YoN.ToLower() == "no")
+            else if (YoN.ToLower() == "no")// om man inte vill ta bort igen så kollar den om man vill spela igen
             {
                 Console.WriteLine("Do you want to play?");
-            incorrectAnswer:
+incorrectAnswer:
                 Console.WriteLine("Yes or no");
-                YoN = Console.ReadLine();
-                if (YoN.ToLower() == "yes")
+                YoN = Console.ReadLine(); //läser in variabel
+                if (YoN.ToLower() == "yes") // om YoN är yes så sätts Play variabeln till true. Detta är för att när den kommer ut metoden så finns en if som skickar dig till starten av programmet igen
                 {
                     Play = true;
                 }
-                else if (YoN.ToLower() == "no")
+                else if (YoN.ToLower() == "no") // om YoN är no så stoppar den hela programmet genom att sätta Play till false
                 {
                     Play = false;
                     Console.Clear();
                 }
-                else
+                else// om YoN inte är yes/no så frågar den igen
                 {
                     goto incorrectAnswer;
                 }
             }
-            else
+            else// om YoN inte är yes/no så frågar den igen
             {
                 Console.WriteLine("Try Again!");
                 goto FaultyAnswer;
@@ -647,5 +656,6 @@ FaultyAnswer:
 
             }
         }
+        #endregion
     }
 }
