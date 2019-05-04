@@ -507,27 +507,60 @@ incorrectAnswer:
         public static void Add()
         {
         AddAgain:
-            CustomWords oldWords = null;
-            if (File.Exists("words.json"))
+            CustomWords oldWords = null; // Sätter owlWords till ingenting
+            if (File.Exists("words.json"))// gör så att oldWords innehåller allt i word.json filen
             {
                 string fileContent = File.ReadAllText("words.json");
                 oldWords = JsonConvert.DeserializeObject<CustomWords>(fileContent);
             }
 
             Console.WriteLine("Write what word you want to add:");
-            string existing = File.ReadAllText("words.json");
+            string existing = File.ReadAllText("words.json"); // låser in words.json och gör så att existing printar ut hela listan
+FaultyWord:
             Console.WriteLine(existing);
             string newWord = Console.ReadLine();
+            if (newWord == "") // båda dessa if kollar så att man inte lägger till något som kommer vara nästan omöjligt att gissa
+            {
+                Console.Clear();
+                Console.WriteLine("Must be a word!");
+                goto FaultyWord;
+            }
+            else // kollar igenom hela ordet så att det inte är några mellanrum mitt i ordet.
+            {
+                for (int i = 0; i < newWord.Length; i++) 
+                {
+                    if (newWord[i] == ' ')
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Please don't use spaces!");
+                        goto FaultyWord;
+                    }
+                }
+            }
+            for (int i = 0; i < Words.Count; i++)// kollar genom alla ord som finns i listan och kollar så att man inte lägger till samma ord två gånger
+            {
+                if (Words[i] == newWord)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Already existing word!");
+                    goto FaultyWord;
+                }
+            }
+            #region addingword
             Console.Clear();
-            Words.Add(newWord.ToLower());
-            oldWords.words.Add(newWord);
+            Words.Add(newWord.ToLower()); // gör så att ordet man vill lägga in är i små bokstäver så man inte behöver gissa med stora bokstäver
+            // från 1 till 1 så lägger den till det nya ordet i den redan existerande listan av ord
+            // 1
+            oldWords.words.Add(newWord); 
             String insertedword = JsonConvert.SerializeObject(oldWords);
             File.WriteAllText("words.json", insertedword);
+            // 1
             Console.WriteLine("Do you want to add another word?");
         FaultyAnswer:
             Console.WriteLine("yes or no");
             YoN = Console.ReadLine();
             Console.Clear();
+            #endregion
             if (YoN.ToLower() == "yes")
             {
                 goto AddAgain;
@@ -557,9 +590,11 @@ incorrectAnswer:
                 Console.WriteLine("Try Again!");
                 goto FaultyAnswer;
             }
+            // kollar om man vill lägga till mera ord och om man inte vill så kollar den om man vill spela igen där den sätter play boolean till true om man vill annars till false
         }
-        public static void PlayAgain()
+        public static void PlayAgain() 
         {
+            // metoden frågar om man vill köra igen när man vunnit och om man säger jag så gör den listorna med fel och rätt gissningar till nya rena listor annars sätter den allt till false och så stoppas spelet
             Console.WriteLine("Want to play again? Answer: yes or no");
         FaultyAnswer:
             YoN = Console.ReadLine();
@@ -589,6 +624,7 @@ incorrectAnswer:
         }
         public static void Lost()
         {
+            // exakt samma som PlayAgain men när du forlorar
             Console.WriteLine("You Lost!");
             Console.WriteLine("The answer was: " + answer);
             Console.WriteLine();
