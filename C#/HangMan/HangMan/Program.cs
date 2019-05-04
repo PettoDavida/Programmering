@@ -655,6 +655,7 @@ FaultyAnswer:
         }
         public static void CheckFile()
         {
+            // kollar så att det finns mer än 0 ord i listan och gör placeholder listan till den listan om det är mer än 0 i listan
             if (File.Exists("words.json"))
             {
                 string fileContent = File.ReadAllText("words.json");
@@ -668,6 +669,7 @@ FaultyAnswer:
         }
         public static void CheckFileV2()
         {
+            // kollar om listan existerar så att man kan edita den när man vill deleta.
             if (File.Exists("words.json"))
             {
                 string fileContent = File.ReadAllText("words.json");
@@ -681,6 +683,7 @@ FaultyAnswer:
         }
         public static void NoDelete()
         {
+            // kollar så att listan har mer än 1 ord innan man deletar och om den har 1 eller mindre så tillåter den dig inte att deleta ord
             if (File.Exists("words.json"))
             {
                 string fileContent = File.ReadAllText("words.json");
