@@ -2,7 +2,7 @@
 
 ### Steps
 
-Kolla programmering Planering.png för en guidad vy av vad som ska hända i programmet
+Kolla Programmering Planering.png för en guidad vy av vad som ska hända i programmet
 
 - Tre arraylists: en med ord man ska gissa, en med alla felaktiga gissningar och en med giltiga gissningar
 - Använder en Random Klass för att skapa ett tal som är mellan 0 och så många ord som lagts in
@@ -15,4 +15,5 @@ Kolla programmering Planering.png för en guidad vy av vad som ska hända i prog
 - man ska även kunna välja ord för sin kompis då är det samma som den andra men man väljer ordet man ska gissa
 - man kommer också kunna ta bort och lägga till ord i listan och detta görs genom att använda en .json fil med en lista i
 
+![Planering Diagram](Planering.PNG)
 
