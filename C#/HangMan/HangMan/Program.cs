@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-
 namespace HangMan
 {
     class CustomWords
@@ -137,29 +136,31 @@ namespace HangMan
             CheckFile();
 
             // Skriver i konsolen 
-            Console.WriteLine("Do you want to play or add custom words?");
-            Console.WriteLine("You can also choose your own word if you want to play with a friend!");
-            Console.WriteLine("It is recommended to add words if it is your first time!");
+            Console.WriteLine("Thank you for choosing to play my game");
+            Console.WriteLine("Today you will try my Hangman");
             Thread.Sleep(2000); // Den pausar programmet i 2 sekunder innan den clearar konsolen
-            Console.Clear();// Tar bort allt i konsolen
+            Console.Clear();// Tar bort all text i konsolen
 
-Start: // En label som programmet kommer hoppa till med en goto
+        Start: // En label som programmet kommer hoppa till med en goto
 
             // Skriver i konsolen 
-            Console.WriteLine("If you want to add words write (add)");
-            Console.WriteLine("If you want to delete words write (delete)");
-            Console.WriteLine("If you want to play write (play)");
-            Console.WriteLine("If you want to choose your own word write(own)");
-            Console.WriteLine("If you want to choose stop write (stop)");
+            Console.WriteLine("    Write the number you want");
+            Console.WriteLine("       1 - Play Alone");
+            Console.WriteLine("       2 - Play with a friend");
+            Console.WriteLine("       3 - Add Words");
+            Console.WriteLine("       4 - Remove Words");
+            Console.WriteLine("       5 - Exit");
+            Console.OutputEncoding = System.Text.Encoding.ASCII;
+            Console.WriteLine("");
 
             // tar in en string och sätter PlayorAdd value till den strängen
             PlayorAdd = Console.ReadLine();
             Console.Clear();// Tar bort allt i konsolen
-            if (PlayorAdd.ToLower() == "play") // om PlayorAdd = play: starta metoden Game
+            if (PlayorAdd.ToLower() == "1") // om PlayorAdd = 1: starta metoden Game
             {
                 Game();
             }
-            else if (PlayorAdd.ToLower() == "add")// om PlayorAdd = add: starta metoden Add
+            else if (PlayorAdd.ToLower() == "3")// om PlayorAdd = 3: starta metoden Add
             {
                 
                     Add();
@@ -170,7 +171,7 @@ Start: // En label som programmet kommer hoppa till med en goto
                     }
                                 
             }
-            else if (PlayorAdd.ToLower() == "delete")// om PlayorAdd = delete: starta metoden Delete
+            else if (PlayorAdd.ToLower() == "4")// om PlayorAdd = 4: starta metoden Delete
             {
                 CheckFileV2();
                 if (Exists)
@@ -187,13 +188,13 @@ Start: // En label som programmet kommer hoppa till med en goto
                 }
                 
             }
-            else if (PlayorAdd.ToLower() == "own")// om PlayorAdd = own: starta metoden OwnGame
+            else if (PlayorAdd.ToLower() == "2")// om PlayorAdd = 2: starta metoden OwnGame
             {
                 OwnGame();   
             }
-            else if (PlayorAdd.ToLower() == "stop")// om PlayorAdd = stop: stoppa programmet
+            else if (PlayorAdd.ToLower() == "5")// om PlayorAdd = 5: stoppa programmet
             {
-
+                goto Stop;
             }
             else // om PlayorAdd = !play !own !delete !add !stop så ska den bara fråga igen genom att gå till labeln start igen
             {
@@ -225,7 +226,7 @@ WonGame:
                 else { goto LostGame; }
 
             }
-
+Stop:
             Console.WriteLine("Program Stopping..."); // visar att programmet stoppar och väntar i 1,5 sek så man ska hinna se
             Thread.Sleep(1500);
         }
@@ -263,7 +264,8 @@ WonGame:
 
             while (running)
             {
-Nothing:
+                HangManArt(wrongGuess.Count); // Skriver ut en målning för att illustrera den klassiska hangman
+            Nothing:
                 if (wrongGuess.Count == art.Length - 1)// Hår så koller den så att man inte har gissat för många gånger
                 {
 
@@ -339,7 +341,7 @@ Nothing:
                     won = true;
                 }
 
-                HangManArt(wrongGuess.Count); // Skriver ut en målning för att illustrera den klassiska hangman
+                
 
 
 
@@ -351,7 +353,7 @@ Nothing:
 
             Console.WriteLine("Write what word you want your friend/friends to guess.");
             answer = Console.ReadLine();
-
+            Console.Clear();
             word = answer.ToCharArray();
 
             running = true;
@@ -484,6 +486,7 @@ FaultyAnswer:
 incorrectAnswer:
                 Console.WriteLine("Yes or no");
                 YoN = Console.ReadLine(); //läser in variabel
+                Console.Clear();
                 if (YoN.ToLower() == "yes") // om YoN är yes så sätts Play variabeln till true. Detta är för att när den kommer ut metoden så finns en if som skickar dig till starten av programmet igen
                 {
                     Play = true;
@@ -519,6 +522,7 @@ incorrectAnswer:
 FaultyWord:
             Console.WriteLine(existing);
             string newWord = Console.ReadLine();
+            Console.Clear();
             if (newWord == "") // båda dessa if kollar så att man inte lägger till något som kommer vara nästan omöjligt att gissa
             {
                 Console.Clear();
@@ -571,6 +575,7 @@ FaultyWord:
 incorrectAnswer:
                 Console.WriteLine("Yes or no");
                 YoN = Console.ReadLine();
+                Console.Clear();
                 if (YoN.ToLower() == "yes")
                 {
                     Play = true;
