@@ -50,8 +50,7 @@
       * Noggrant gjorda. Jag försökte att göra kommentarerna så noggrant jag kunde men pågrund av att jag hade glömt att kommentera så gjorde jag det senare när koden var näst intill klar
    * Min källkod är...  
       
-      * Lång, strukturerad och oöverskådlig. Medans min kodstruktur inte är den bästa så tycker jag att den är strukturerad. Det är även så att om man jämnför med mina andra program så har denna runt 6 gånger så mycket kod som de flesta. Med oöverskådlig så menar jag att den inte är lättläst men inte heller svårläst ag skulle säga mittemellan. Det är inte alltid jätte lätt att veta vart allt gör och går så om man kommer in i koden så vet man.
-   * 
+      * Lång, strukturerad och lättläst. Medans min kodstruktur inte är den bästa så tycker jag att den är strukturerad. Det är även så att om man jämnför med mina andra program så har denna runt 6 gånger så mycket kod som de flesta. Jag tycker att min kod är lättläst metoderna har relevanta namn för vad de gör och man förstår lätt hur allt funkar.
 <br>
 
 ### Självskattning.
