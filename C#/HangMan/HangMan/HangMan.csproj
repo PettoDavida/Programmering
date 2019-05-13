@@ -53,6 +53,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Utvärdering.md" />
     <None Include="packages.config" />
     <None Include="Plan.md" />
   </ItemGroup>
